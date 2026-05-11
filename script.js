@@ -1,15 +1,44 @@
-// Mobile nav toggle
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
-if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
+// Sidebar toggle (mobile)
+const sidebarToggle = document.getElementById('sidebarToggle');
+const sidebar = document.getElementById('sidebar');
+const sidebarOverlay = document.getElementById('sidebarOverlay');
+function openSidebar() {
+  sidebar.classList.add('open');
+  sidebarOverlay.classList.add('open');
+}
+function closeSidebar() {
+  sidebar.classList.remove('open');
+  sidebarOverlay.classList.remove('open');
+}
+if (sidebarToggle) {
+  sidebarToggle.addEventListener('click', openSidebar);
+}
+if (sidebarOverlay) {
+  sidebarOverlay.addEventListener('click', closeSidebar);
+}
+
+// Sidebar nav active link tracking
+const sections = document.querySelectorAll('section[id]');
+const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
+function updateActiveLink() {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 120) current = s.id;
   });
-  // Close menu on link click
-  navLinks.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => navLinks.classList.remove('open'));
+  sidebarLinks.forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
   });
 }
+window.addEventListener('scroll', updateActiveLink);
+updateActiveLink();
+
+// Close sidebar on link click (mobile)
+sidebarLinks.forEach(a => {
+  a.addEventListener('click', () => {
+    closeSidebar();
+  });
+});
 
 // Level tabs
 document.querySelectorAll('.level-tab').forEach(tab => {
@@ -22,24 +51,17 @@ document.querySelectorAll('.level-tab').forEach(tab => {
   });
 });
 
-// Scroll progress
-window.addEventListener('scroll', () => {
-  const h = document.documentElement;
-  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
-  document.getElementById('navProgress').style.width = pct + '%';
+// FAQ toggle
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('open');
+  });
 });
 
-// Nav active link
-const sections = document.querySelectorAll('section[id]');
-const navLinkItems = document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 100) current = s.id;
-  });
-  navLinkItems.forEach(a => {
-    a.classList.remove('active');
-    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+// Easter egg toggle
+document.querySelectorAll('.egg-card').forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('expanded');
   });
 });
 

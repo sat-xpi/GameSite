@@ -10,20 +10,49 @@
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">DELTA<span>FORCE</span></div>
-  <button class="nav-toggle" id="navToggle" aria-label="菜单">&#9776;</button>
-  <div class="nav-links" id="navLinks">
-    <a href="#intro" class="active">入门</a>
-    <a href="#modes">模式</a>
-    <a href="#operators">干员</a>
-    <a href="#weapons">武器</a>
-    <a href="#advanced">进阶</a>
-    <a href="#maps">地图</a>
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">DELTA<span>FORCE</span></div>
+  <div class="sidebar-nav" id="sidebarNav">
+    <div class="sidebar-group">
+      <div class="sidebar-group-label">基础</div>
+      <a href="#intro" class="active" data-icon="📖">入门</a>
+      <a href="#modes" data-icon="🎮">模式</a>
+      <a href="#operators" data-icon="👤">干员</a>
+      <a href="#weapons" data-icon="🔫">武器</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-group-label">进阶</div>
+      <a href="#advanced" data-icon="⚡">进阶</a>
+      <a href="#maps" data-icon="🗺">地图</a>
+      <a href="#story" data-icon="📜">世界观</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-group-label">资源</div>
+      <a href="#updates" data-icon="📋">更新</a>
+      <a href="#videos" data-icon="🎬">视频</a>
+      <a href="#faq" data-icon="❓">FAQ</a>
+      <a href="#plan" data-icon="📊">计划</a>
+      <a href="#economy" data-icon="💰">经济</a>
+      <a href="#easter" data-icon="🥚">彩蛋</a>
+      <a href="#tips" data-icon="💡">口诀</a>
+      <a href="#community" data-icon="🌐">社区</a>
+    </div>
   </div>
-  <div class="nav-progress" id="navProgress"></div>
-</nav>
+  <div class="sidebar-footer">
+    <a href="https://github.com/sat-xpi/GameSite" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</aside>
+
+<!-- MOBILE HEADER -->
+<div class="mobile-header" id="mobileHeader">
+  <div class="sidebar-logo">DELTA<span>FORCE</span></div>
+  <button class="sidebar-toggle" id="sidebarToggle" aria-label="菜单">&#9776;</button>
+</div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content" id="mainContent">
 
 <!-- HERO -->
 <section class="hero" id="top">
@@ -1287,24 +1316,11 @@
   </div>
 </section>
 
+</div><!-- /main-content -->
+
 <footer>
-  <div class="footer-links">
-    <a href="#story">世界观</a>
-    <a href="#updates">更新日志</a>
-    <a href="#videos">视频攻略</a>
-    <a href="#faq">FAQ</a>
-    <a href="#plan">成长计划</a>
-    <a href="#economy">经济系统</a>
-    <a href="#easter">彩蛋</a>
-    <a href="#tips">终极口诀</a>
-    <a href="#community">社区</a>
-  </div>
   <p>DELTA FORCE TACTICAL GUIDE &copy; 2026 | 数据来源：游戏实测 + 社区攻略整理</p>
   <p style="margin-top:0.5rem">本攻略基于2025-2026年版本（S9赛季），游戏持续更新中，具体数据以游戏内为准</p>
-  <p style="margin-top:0.75rem;color:var(--text-dim)">
-    <a href="https://github.com/sat-xpi/GameSite" target="_blank" rel="noopener" style="color:var(--accent)">GitHub</a> &middot; 
-    最后更新：2026年5月
-  </p>
 </footer>
 
 <script src="script.js"></script>
