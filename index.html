@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三角洲行动 - 战术行动指南 | Delta Force Tactical Guide</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">DELTA<span>FORCE</span></div>
+  <div class="nav-links">
+    <a href="#intro" class="active">入门</a>
+    <a href="#modes">模式</a>
+    <a href="#operators">干员</a>
+    <a href="#weapons">武器</a>
+    <a href="#advanced">进阶</a>
+    <a href="#easter">彩蛋</a>
+  </div>
+  <div class="nav-progress" id="navProgress"></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-grid"></div>
+  <div class="hero-badge">Tactical Operations Guide v3.0</div>
+  <h1><span class="outline">DELTA</span> FORCE<br><span class="accent">三角洲行动</span></h1>
+  <p class="hero-sub">从零基础到战术大师的完整进阶路线。2035年近未来战场，搜索、战斗、撤离——每一次行动都是一场生死博弈。</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-num">3</div>
+      <div class="hero-stat-label">核心模式</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">4</div>
+      <div class="hero-stat-label">干员职业</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">5+</div>
+      <div class="hero-stat-label">作战地图</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">18</div>
+      <div class="hero-stat-label">隐藏彩蛋</div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>向下探索</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- LEVEL 1: INTRO -->
+<section id="intro" class="reveal">
+  <div class="section-header">
+    <div class="section-label">Phase 01 // Foundation</div>
+    <h2 class="section-title">新手入门：战场基础</h2>
+    <p class="section-desc">理解游戏核心机制，掌握基础操作，迈出成为战术干员的第一步。</p>
+  </div>
+
+  <div class="progress-path">
+    <div class="progress-step" data-color="green">
+      <div class="step-dot">01</div>
+      <div class="step-title">完成新手教程</div>
+      <div class="step-desc">掌握移动、射击、视角切换</div>
+    </div>
+    <div class="progress-step" data-color="green">
+      <div class="step-dot">02</div>
+      <div class="step-title">选择首发干员</div>
+      <div class="step-desc">推荐支援兵"蜂医"</div>
+    </div>
+    <div class="progress-step" data-color="blue">
+      <div class="step-dot">03</div>
+      <div class="step-title">装配低成本装备</div>
+      <div class="step-desc">总造价控制在18万以内</div>
+    </div>
+    <div class="progress-step" data-color="blue">
+      <div class="step-dot">04</div>
+      <div class="step-title">烽火地带实战</div>
+      <div class="step-desc">搜打撤核心思路入门</div>
+    </div>
+    <div class="progress-step" data-color="amber">
+      <div class="step-dot">05</div>
+      <div class="step-title">完成部门任务</div>
+      <div class="step-desc">解锁武器与干员升级</div>
+    </div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-icon green">&#9881;</div>
+      <h3>核心操作必须100%掌握</h3>
+      <ul class="card-list">
+        <li>移动与视角控制（第一/第三人称切换）</li>
+        <li>射击、换弹、主副武器快速切换</li>
+        <li>下蹲/趴下利用掩体规避伤害</li>
+        <li>小地图实时显示敌友动态，是预判走位的核心</li>
+        <li>血量低于30%立即找掩体回血</li>
+        <li>疾跑、攀爬需能量条满值</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-icon blue">&#9733;</div>
+      <h3>新手首选干员：蜂医</h3>
+      <p>自带三个适配新手的技能，大幅降低入门难度：</p>
+      <ul class="card-list">
+        <li><strong>激素枪</strong>：自动锁定治疗3名队友 + 免疫异常状态</li>
+        <li><strong>烟雾战术</strong>：无人机喷射掩护烟雾，或转化为治疗领域</li>
+        <li><strong>高效救援</strong>：救援时间缩短50%，复活后队友额外30%血量</li>
+      </ul>
+      <div class="tip-box success" style="margin-top:1rem">
+        <div class="tip-box-title">隐藏技巧</div>
+        <p>G技能 + X大招同时使用触发"治疗烟"，蹲烟回血速度翻倍！</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-icon amber">&#9876;</div>
+      <h3>新手推荐武器</h3>
+      <table class="info-table" style="margin-top:0.5rem">
+        <thead>
+          <tr><th>武器</th><th>类型</th><th>特点</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>AKS74</td><td><span class="tag tag-blue">突击步枪</span></td><td>稳定性高，射程800米</td></tr>
+          <tr><td>SG552</td><td><span class="tag tag-blue">突击步枪</span></td><td>后坐力低，中近距离稳定</td></tr>
+          <tr><td>MP5</td><td><span class="tag tag-green">冲锋枪</span></td><td>贴脸爆发高，配消音器偷袭</td></tr>
+          <tr><td>M4A1</td><td><span class="tag tag-amber">狙击步枪</span></td><td>远程精准火力支援</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card">
+      <div class="card-icon purple">&#127968;</div>
+      <h3>低成本保命装备套餐</h3>
+      <p>总计不超过18万哈夫币，死10次才亏180万：</p>
+      <ul class="card-list">
+        <li><strong>头盔</strong>：破损 HO9 五级头（约2万）</li>
+        <li><strong>胸挂</strong>：GIR 野战胸挂（约1万）</li>
+        <li><strong>背包</strong>：D3 战术背包 20格（约5万）</li>
+        <li><strong>护甲</strong>：最便宜三级甲（约10万）</li>
+      </ul>
+      <div class="tip-box warn" style="margin-top:1rem">
+        <div class="tip-box-title">避坑提醒</div>
+        <p>没配件的橙色稀有武器不如改好的基础枪！切勿盲目捡稀有武器。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip-box danger" style="margin-top:2rem">
+    <div class="tip-box-title">核心认知</div>
+    <p>三角洲行动的胜负逻辑不是"谁枪刚"，而是：<strong>会苟 + 会配合 + 会找钱 = 赢家</strong>。核心玩法是"搜打撤"——搜索、战斗、撤离，目的是赚钱，而非单纯击杀。</p>
+  </div>
+</section>
+
+<!-- GAME MODES -->
+<section id="modes" class="reveal">
+  <div class="section-header">
+    <div class="section-label">Phase 02 // Operations</div>
+    <h2 class="section-title">三大核心模式</h2>
+    <p class="section-desc">每种模式都有独特的战术逻辑，建议从烽火地带开始逐步体验。</p>
+  </div>
+
+  <div class="level-tabs">
+    <button class="level-tab active" data-level="1" data-target="mode-havoc">
+      <span class="tab-num">1</span> 烽火地带
+    </button>
+    <button class="level-tab" data-level="2" data-target="mode-warfare">
+      <span class="tab-num">2</span> 全面战场
+    </button>
+    <button class="level-tab" data-level="3" data-target="mode-bhd">
+      <span class="tab-num">3</span> 黑鹰坠落
+    </button>
+  </div>
+
+  <div class="level-content active" id="mode-havoc">
+    <div class="split">
+      <div>
+        <div class="card">
+          <div class="card-icon blue">&#127919;</div>
+          <h3>烽火地带 — 搜打撤核心</h3>
+          <p>3人小队战术生存玩法，类似《逃离塔科夫》。核心目标是搜刮资源并成功撤离。</p>
+          <div class="tip-box info" style="margin-top:1rem">
+            <div class="tip-box-title">推荐路线</div>
+            <p>西侧厂房 → 二楼保险箱（必出蓝紫色装备）→ 仓库区（医疗包、电子材料）</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-icon amber">&#128176;</div>
+          <h3>高价值地点</h3>
+          <table class="info-table">
+            <thead><tr><th>地点</th><th>产出</th></tr></thead>
+            <tbody>
+              <tr><td>水泥厂地下金库</td><td>瞄准镜、消音器（50万+）</td></tr>
+              <tr><td>大坝22号协议箱</td><td><span class="tag tag-amber">金条</span>（200-300万）</td></tr>
+              <tr><td>军营军械库</td><td>3级甲（150万）</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="route-box">
+      <div class="route-title">
+        <span style="color:var(--green)">&#9679;</span> 撤离铁律
+      </div>
+      <div class="route-flow">
+        <div class="route-node start">凑够60万</div>
+        <div class="route-arrow">&rarr;</div>
+        <div class="route-node mid">立刻跑！不贪</div>
+        <div class="route-arrow">&rarr;</div>
+        <div class="route-node mid">距离超1公里?</div>
+        <div class="route-arrow">&rarr;</div>
+        <div class="route-node mid">果断重开</div>
+        <div class="route-arrow">&rarr;</div>
+        <div class="route-node end">安全撤离</div>
+      </div>
+    </div>
+
+    <div class="tip-box warn">
+      <div class="tip-box-title">军营潜入技巧</div>
+      <p>千万别走正门！用手雷炸通风口进入，安全系数翻倍。撤离前提前规划路线，注意对局剩余时间。</p>
+    </div>
+  </div>
+
+  <div class="level-content" id="mode-warfare">
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon red">&#9876;</div>
+        <h3>全面战场 — 24v24大规模作战</h3>
+        <p>可驾驶坦克、直升机等载具，适合有一定基础后体验大规模PVP。推荐职业：工程师。</p>
+        <ul class="card-list">
+          <li>修复载具（装甲车、直升机），队友冲锋时蹲后方持续维修</li>
+          <li><strong>进攻方</strong>：优先抢占"棱镜攻势"航空箱获取额外优势</li>
+          <li><strong>防守方</strong>：B点失守后可绕后偷袭敌方A点，打乱进攻节奏</li>
+          <li><strong>坦克位</strong>：副炮位可快速刷分，被攻击时立即释放烟雾并维修</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-icon purple">&#128737;</div>
+        <h3>载具战术要点</h3>
+        <ul class="card-list">
+          <li>除快速移动外，载具可作为移动火力点提供支援</li>
+          <li>工程师维修效率是其他干员的两倍</li>
+          <li>直升机被锁定时立即趴下，空地也能规避锁定导弹</li>
+          <li>团队协同：载具 + 步兵配合推进效率远高于单打独斗</li>
+        </ul>
+        <div class="tip-box info" style="margin-top:1rem">
+          <div class="tip-box-title">建议</div>
+          <p>等级达到15级以上再进入全面战场体验大规模PVP。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="level-content" id="mode-bhd">
+    <div class="card-grid">
+      <div class="card card-full">
+        <div class="card-icon green">&#127909;</div>
+        <h3>黑鹰坠落 — PVE合作模式</h3>
+        <p>还原经典电影战役，适合组队打副本拿奖励。任务示例：解救人质。</p>
+        <div class="split" style="margin-top:1rem">
+          <div>
+            <h4 style="color:var(--accent);font-size:0.9rem;margin-bottom:0.75rem">团队分工建议</h4>
+            <ul class="card-list">
+              <li><strong>突击兵（红狼）</strong>：绕后清敌</li>
+              <li><strong>支援兵（蜂医）</strong>：烟雾掩护 + 治疗</li>
+              <li><strong>工程师</strong>：修复直升机</li>
+              <li><strong>侦察兵</strong>：标记敌方位置</li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="color:var(--accent);font-size:0.9rem;margin-bottom:0.75rem">关键技能保留</h4>
+            <ul class="card-list">
+              <li>导弹、群体烟雾等强力支援技能留到决胜时刻使用</li>
+              <li>救援优先：队友倒地后优先救援，避免反复消耗复活资源</li>
+              <li>禁止单独行动：组队分工效率更高</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPERATORS -->
+<section id="operators" class="reveal">
+  <div class="section-header">
+    <div class="section-label">Phase 03 // Specialists</div>
+    <h2 class="section-title">干员系统全解析</h2>
+    <p class="section-desc">四大职业各有独特定位与技能，了解所有干员是打出高效配合的基础。</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="card" style="border-top:2px solid var(--red)">
+      <div class="card-icon red">&#128165;</div>
+      <h3>突击兵 — 主攻输出</h3>
+      <p>高爆发输出，适合正面交战与突破卡点。</p>
+      <table class="info-table" style="margin-top:0.75rem">
+        <thead><tr><th>干员</th><th>核心技能</th><th>战术定位</th></tr></thead>
+        <tbody>
+          <tr><td>威龙</td><td>虎蹲炮（5米击倒5秒）+ 磁吸炸弹</td><td>破防/突进</td></tr>
+          <tr><td>红狼</td><td>高爆发收割能力</td><td>正面收割</td></tr>
+        </tbody>
+      </table>
+      <div class="tip-box danger" style="margin-top:0.75rem">
+        <div class="tip-box-title">电钻缴械术</div>
+        <p>威龙用电钻技能持续攻击持盾敌人，3秒内强制缴械，破解深蓝盾牌无解局面！</p>
+      </div>
+    </div>
+    <div class="card" style="border-top:2px solid var(--green)">
+      <div class="card-icon green">&#10010;</div>
+      <h3>支援兵 — 团队续航</h3>
+      <p>提供治疗与团队增益，大幅提升队伍生存率。</p>
+      <table class="info-table" style="margin-top:0.75rem">
+        <thead><tr><th>干员</th><th>核心技能</th><th>战术定位</th></tr></thead>
+        <tbody>
+          <tr><td>蜂医</td><td>激素枪 + 治疗烟 + 效率救援</td><td>续航/免疫</td></tr>
+          <tr><td>蛊</td><td>攻击无人机压制</td><td>远程支援</td></tr>
+        </tbody>
+      </table>
+      <div class="tip-box success" style="margin-top:0.75rem">
+        <div class="tip-box-title">蜂医互扎流</div>
+        <p>两名蜂医互相注射激素，回血翻倍 + 全员免疫负面状态，残血反打神技！</p>
+      </div>
+    </div>
+    <div class="card" style="border-top:2px solid var(--accent)">
+      <div class="card-icon blue">&#128065;</div>
+      <h3>侦察兵 — 情报收集</h3>
+      <p>擅长侦查敌情，隐蔽行动，远程狙击位首选。</p>
+      <table class="info-table" style="margin-top:0.75rem">
+        <thead><tr><th>干员</th><th>核心技能</th><th>战术定位</th></tr></thead>
+        <tbody>
+          <tr><td>露娜</td><td>侦察箭标记敌人</td><td>远程标记</td></tr>
+          <tr><td>骷爪（麦晓雯）</td><td>被动加快静步速度</td><td>潜入搜刮</td></tr>
+          <tr><td>银翼</td><td>无人机侦察</td><td>空中侦察</td></tr>
+        </tbody>
+      </table>
+      <div class="tip-box info" style="margin-top:0.75rem">
+        <div class="tip-box-title">露娜烟中透视</div>
+        <p>队友投掷烟雾弹后，露娜射侦察箭入烟，标记所有烟雾内敌人持续10秒！</p>
+      </div>
+    </div>
+    <div class="card" style="border-top:2px solid var(--amber)">
+      <div class="card-icon amber">&#128736;</div>
+      <h3>工程兵 — 技术支援</h3>
+      <p>擅长爆破、搭建防御工事，适合攻坚/守点。</p>
+      <table class="info-table" style="margin-top:0.75rem">
+        <thead><tr><th>干员</th><th>核心技能</th><th>战术定位</th></tr></thead>
+        <tbody>
+          <tr><td>乌鲁鲁</td><td>速凝掩体快速建墙</td><td>阵地防御</td></tr>
+          <tr><td>牧羊人</td><td>陷阱预警</td><td>防守/排雷</td></tr>
+        </tbody>
+      </table>
+      <div class="tip-box warn" style="margin-top:0.75rem">
+        <div class="tip-box-title">乌鲁鲁经济价值</div>
+        <p>速凝掩体适合打高难度副本（如"风暴眼"），每局收益可达200万+！</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEAPONS -->
+<section id="weapons" class="reveal">
+  <div class="section-header">
+    <div class="section-label">Phase 04 // Arsenal</div>
+    <h2 class="section-title">武器装备与改装</h2>
+    <p class="section-desc">三角洲行动的武器改装系统是核心特色，深入研究改装搭配是提升战力的关键。</p>
+  </div>
+
+  <div class="level-tabs">
+    <button class="level-tab active" data-level="2" data-target="wp-allround">
+      <span class="tab-num">1</span> K416 全能型
+    </button>
+    <button class="level-tab" data-level="1" data-target="wp-cqb">
+      <span class="tab-num">2</span> AR-57 CQB之王
+    </button>
+    <button class="level-tab" data-level="3" data-target="wp-budget">
+      <span class="tab-num">3</span> AKS74U 低成本战神
+    </button>
+  </div>
+
+  <div class="level-content active" id="wp-allround">
+    <div class="card" style="border-top:2px solid var(--accent)">
+      <h3>K416 突击步枪 — 全能首选，全地图适配</h3>
+      <p style="color:var(--text-secondary);margin:0.5rem 0 1rem">35米内连射无明显后坐，S9胜率最高武器</p>
+      <table class="info-table">
+        <thead><tr><th>部位</th><th>配件</th><th>属性加成</th></tr></thead>
+        <tbody>
+          <tr><td>枪口</td><td>沙暴垂直补偿器</td><td>-18% 垂直后坐</td></tr>
+          <tr><td>枪管</td><td>精英重型枪管</td><td>+20% 射程</td></tr>
+          <tr><td>握把</td><td>共振三代握把</td><td>-25% 水平晃动</td></tr>
+          <tr><td>枪托</td><td>锚点导轨枪托</td><td>+30% 据枪稳定</td></tr>
+          <tr><td>弹匣</td><td>45发扩容弹匣</td><td>—</td></tr>
+          <tr><td>瞄具</td><td>微型红点 / 4倍全息</td><td>开镜速度0.3秒</td></tr>
+        </tbody>
+      </table>
+      <div class="split" style="margin-top:1rem">
+        <div class="tip-box success">
+          <div class="tip-box-title">最佳场景</div>
+          <p>零号大坝巷战、长弓溪谷中距离压制</p>
+        </div>
+        <div class="tip-box info">
+          <div class="tip-box-title">压枪轨迹</div>
+          <p>水平晃动大，搭配共振握把后压枪以左右微调为主</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="level-content" id="wp-cqb">
+    <div class="card" style="border-top:2px solid var(--green)">
+      <h3>AR-57 — CQB之王，室内清房神器</h3>
+      <p style="color:var(--text-secondary);margin:0.5rem 0 1rem">800发/分钟高射速，5.7mm弹药破甲强，1v2反打成功率超70%</p>
+      <table class="info-table">
+        <thead><tr><th>部位</th><th>配件</th></tr></thead>
+        <tbody>
+          <tr><td>枪口</td><td>FFC 双流制退器</td></tr>
+          <tr><td>握把</td><td>共振三代握把</td></tr>
+          <tr><td>枪托</td><td>锚点枪托</td></tr>
+          <tr><td>弹匣</td><td>57发弹鼓</td></tr>
+          <tr><td>特殊</td><td>战术镭射（室内贴脸无需开镜）</td></tr>
+        </tbody>
+      </table>
+      <div class="tip-box success" style="margin-top:1rem">
+        <div class="tip-box-title">最佳场景</div>
+        <p>航天基地总裁区、巴克什室内点位 — 狭窄空间内称王</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="level-content" id="wp-budget">
+    <div class="card" style="border-top:2px solid var(--amber)">
+      <h3>AKS74U — 低成本战神，零氪首选</h3>
+      <p style="color:var(--text-secondary);margin:0.5rem 0 1rem">改装成本比满改低60%，稳定性接近满配</p>
+      <table class="info-table">
+        <thead><tr><th>部位</th><th>配件</th></tr></thead>
+        <tbody>
+          <tr><td>枪管</td><td>加百列长枪管（+50米射程）</td></tr>
+          <tr><td>握把</td><td>共振垂直握把（-30%后坐力）</td></tr>
+          <tr><td>弹匣</td><td>30发聚合物弹匣</td></tr>
+          <tr><td>枪口</td><td>堡垒消音器</td></tr>
+        </tbody>
+      </table>
+      <div class="tip-box warn" style="margin-top:1rem">
+        <div class="tip-box-title">适用人群</div>
+        <p>零氪玩家快速成型、低段位上分、跑刀转战斗玩法的最佳过渡武器</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip-box info" style="margin-top:2rem">
+    <div class="tip-box-title">推荐灵敏度设置</div>
+    <p>镜头 55 / 开火 48 / 瞄准 45 — 适配全武器控枪，职业选手验证数据</p>
+  </div>
+</section>
+
+<!-- ADVANCED -->
+<section id="advanced" class="reveal">
+  <div class="section-header">
+    <div class="section-label">Phase 05 // Elite</div>
+    <h2 class="section-title">进阶战术：身法与枪法</h2>
+    <p class="section-desc">精细化操作 + 场景化适配 + 团队化协同，掌握后胜率平均提升35%。</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-icon red">&#9889;</div>
+      <h3>秒蹲摆头连动</h3>
+      <p style="color:var(--accent);font-size:0.78rem;margin:0.25rem 0 0.5rem">实战胜率 +25%</p>
+      <p>开镜开火瞬间按蹲键，同时规律左右摆头。规避70%爆头线伤害。</p>
+      <p style="color:var(--text-dim);font-size:0.75rem;margin-top:0.5rem">练习标准：每分钟完成60次以上为合格</p>
+    </div>
+    <div class="card">
+      <div class="card-icon blue">&#128640;</div>
+      <h3>滑铲接腰射</h3>
+      <p style="color:var(--accent);font-size:0.78rem;margin:0.25rem 0 0.5rem">利用无敌帧突袭</p>
+      <p>奔跑状态按滑铲键，落地瞬间腰射开火。搭配K15/MP7，3秒内完成击杀。</p>
+      <p style="color:var(--text-dim);font-size:0.75rem;margin-top:0.5rem">适用场景：突脸突袭、突破卡点</p>
+    </div>
+    <div class="card">
+      <div class="card-icon purple">&#128373;</div>
+      <h3>晃身 Peek（进阶版）</h3>
+      <p style="color:var(--accent);font-size:0.78rem;margin:0.25rem 0 0.5rem">避免被预瞄锁定</p>
+      <p>快速探头开镜射击 → 立即回拉掩体，重复2-3次后切换位置。首次用1.25倍镭射收集信息，第二次切4倍镜精准打击。</p>
+    </div>
+    <div class="card">
+      <div class="card-icon green">&#128123;</div>
+      <h3>小碎步静移</h3>
+      <p style="color:var(--accent);font-size:0.78rem;margin:0.25rem 0 0.5rem">脚步声音降低60%</p>
+      <p>奔跑时间歇性按方向键，搭配侦察兵麦晓雯被动，蹲伏状态完全无声。</p>
+      <p style="color:var(--text-dim);font-size:0.75rem;margin-top:0.5rem">适用场景：室内搜点与转移</p>
+    </div>
+    <div class="card">
+      <div class="card-icon amber">&#9878;</div>
+      <h3>双切取消后摇</h3>
+      <p style="color:var(--accent);font-size:0.78rem;margin:0.25rem 0 0.5rem">DPS提升20%</p>
+      <p>快速按数字键2、1切换武器，取消换弹与射击后摇。打空弹匣瞬间双切直接续火。</p>
+      <p style="color:var(--text-dim);font-size:0.75rem;margin-top:0.5rem">必备武器：AKM、SCAR-H</p>
+    </div>
+    <div class="card">
+      <div class="card-icon red">&#127919;</div>
+      <h3>中心预瞄法</h3>
+      <p style="color:var(--accent);font-size:0.78rem;margin:0.25rem 0 0.5rem">开镜速度提升0.5秒</p>
+      <p>移动时始终将屏幕中心对准敌人可能出现的位置，开镜后准星直接锁定目标。</p>
+      <p style="color:var(--text-dim);font-size:0.75rem;margin-top:0.5rem">训练场移动靶命中率85%以上合格</p>
+    </div>
+  </div>
+
+  <div class="route-box" style="margin-top:2rem">
+    <div class="route-title">
+      <span style="color:var(--accent)">&#9670;</span> 推荐干员联动：进攻攻坚组
+    </div>
+    <div class="route-flow">
+      <div class="route-node mid">露娜侦察箭标记</div>
+      <div class="route-arrow">&rarr;</div>
+      <div class="route-node end">威龙C4炸掩体</div>
+      <div class="route-arrow">&rarr;</div>
+      <div class="route-node start">红狼突进收割</div>
+      <div class="route-arrow">&rarr;</div>
+      <div class="route-node mid">蜂医续航免疫</div>
+    </div>
+    <p style="color:var(--text-secondary);font-size:0.82rem;margin-top:1rem;text-align:center">
+      10秒内突破任意卡点 | 2突击 + 1侦察 + 1支援
+    </p>
+  </div>
+
+  <div class="split" style="margin-top:1.5rem">
+    <div class="tip-box danger">
+      <div class="tip-box-title">排位连赢/连输调控</div>
+      <p>连赢3把 → 升档（全装猛攻）；连输2把 → 降档（裸装跑刀回血）。核心：避免上头梭哈。</p>
+    </div>
+    <div class="tip-box success">
+      <div class="tip-box-title">每日训练计划</div>
+      <p>训练场微操1小时/天 + 匹配实战3局/天。一周内从普通玩家蜕变。</p>
+    </div>
+  </div>
+</section>
+
+<!-- MAP TACTICS -->
+<section id="maps" class="reveal">
+  <div class="section-header">
+    <div class="section-label">Phase 06 // Battleground</div>
+    <h2 class="section-title">地图战术攻略</h2>
+    <p class="section-desc">掌握每张地图的关键点位与转移路线是高分局的核心竞争力。</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="card" style="border-left:3px solid var(--accent)">
+      <h3>零号大坝 — 巷战之王</h3>
+      <p style="color:var(--text-secondary);font-size:0.85rem;margin-bottom:0.75rem">资源密集，新手最推荐地图</p>
+      <div class="route-box" style="margin:0;padding:1rem">
+        <div class="route-flow">
+          <div class="route-node start">水泥厂</div>
+          <div class="route-arrow">&rarr;</div>
+          <div class="route-node mid">行政楼</div>
+          <div class="route-arrow">&rarr;</div>
+          <div class="route-node mid">主变电站</div>
+          <div class="route-arrow">&rarr;</div>
+          <div class="route-node mid">小变电站</div>
+          <div class="route-arrow">&rarr;</div>
+          <div class="route-node end">军营</div>
+        </div>
+      </div>
+      <ul class="card-list">
+        <li><strong>S级点位</strong>：行政辖区地下金库</li>
+        <li>全程静步，交替掩体推进</li>
+        <li>楼梯口必丢闪光弹</li>
+        <li>室内清房用滑铲腰射</li>
+      </ul>
+    </div>
+    <div class="card" style="border-left:3px solid var(--green)">
+      <h3>长弓溪谷 — 远程对抗</h3>
+      <p style="color:var(--text-secondary);font-size:0.85rem;margin-bottom:0.75rem">开阔地形，狙击手天堂</p>
+      <ul class="card-list">
+        <li>占据高地（瞭望塔、岩石制高点）</li>
+        <li>露娜远程标记 + M24狙击压制</li>
+        <li>优先载具转移，避开桥梁、平原架枪点</li>
+        <li>转移前无人机侦察路线</li>
+        <li>被直升机锁定时立即趴下规避</li>
+      </ul>
+    </div>
+    <div class="card" style="border-left:3px solid var(--purple)">
+      <h3>航天基地 — 多层攻防</h3>
+      <p style="color:var(--text-secondary);font-size:0.85rem;margin-bottom:0.75rem">复杂结构，多条秘密路线</p>
+      <ul class="card-list">
+        <li><strong>隐藏技巧</strong>：总裁区"浮力"洞口，从楼梯侧边窗台跳跃进入</li>
+        <li>码头滑索直达总裁区，快速抢占高点</li>
+        <li>走"鼠道"潜入，避开正面交火</li>
+        <li>配合侦察无人机先清外围再突入</li>
+      </ul>
+    </div>
+    <div class="card" style="border-left:3px solid var(--amber)">
+      <h3>巴克什 — 城市攻坚</h3>
+      <p style="color:var(--text-secondary);font-size:0.85rem;margin-bottom:0.75rem">城墙断裂地形，需团队配合</p>
+      <ul class="card-list">
+        <li>城墙断裂高塔旁和重生点附近有协议箱</li>
+        <li>室内点位用AR-57清房效率最高</li>
+        <li>配合乌鲁鲁速凝掩体固守高价值点</li>
+        <li>注意暗角伏击，保持小碎步推进</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tip-box info" style="margin-top:2rem">
+    <div class="tip-box-title">物资优先级</div>
+    <p>武器 → 5级以上护甲 → 核心配件 → 药品 → 烟雾弹（必带2个）→ 手雷。背包不塞满低价值物资，预留空间捡金/红品。</p>
+  </div>
+</section>
+
+<!-- ECONOMY -->
+<section id="economy" class="reveal">
+  <div class="section-header">
+    <div class="section-label">Phase 07 // Logistics</div>
+    <h2 class="section-title">经济系统与搬砖攻略</h2>
+    <p class="section-desc">学会管理哈夫币，稳定日入300万不是梦。</p>
+  </div>
+
+  <div class="split">
+    <div class="card">
+      <div class="card-icon green">&#128176;</div>
+      <h3>新手阶段：跑刀入门</h3>
+      <p>用18万跑刀装进常规烽火地带，优先搜高价值物品：</p>
+      <table class="info-table" style="margin-top:0.75rem">
+        <thead><tr><th>物品</th><th>类型</th><th>单价</th></tr></thead>
+        <tbody>
+          <tr><td>太阳能板</td><td>电子类</td><td>1.2万</td></tr>
+          <tr><td>电子温度计</td><td>电子类</td><td>1.5万</td></tr>
+          <tr><td>绿手术包</td><td>医疗类</td><td>1.8万</td></tr>
+          <tr><td>蓝药包</td><td>医疗类</td><td>2万</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card">
+      <div class="card-icon amber">&#127384;</div>
+      <h3>仓库管理规则</h3>
+      <ul class="card-list">
+        <li><strong>必留</strong>：枪械零件/火药/处理器（制造5级弹/甲核心材料）</li>
+        <li><strong>必留</strong>：GTI箱材料/钥匙卡包（兑换类）</li>
+        <li><strong>必留</strong>：3-4级甲/弹、蓝品弹挂背包、兴奋剂针（实用类）</li>
+        <li><strong>清理</strong>：低阶白/绿品装备直接出售</li>
+        <li><strong>限制</strong>：同类型物资保留20组上限</li>
+        <li><strong>月度</strong>：每月清理过期钥匙</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tip-box info" style="margin-top:1.5rem">
+    <div class="tip-box-title">经济运营要点</div>
+    <p>初期出售多余物资快速累积启动资金；每日任务可获取大量资源，建议每日清空；拍卖行有4次减价机会。每日收益上限：普通800万 / 高活跃1100万。</p>
+  </div>
+</section>
+
+<!-- EASTER EGGS -->
+<section id="easter" class="reveal">
+  <div class="section-header">
+    <div class="section-label">Phase 08 // Secrets</div>
+    <h2 class="section-title">隐藏彩蛋全攻略</h2>
+    <p class="section-desc">全地图共18个隐藏彩蛋，解锁专属枪械皮肤与稀有奖励。</p>
+  </div>
+
+  <div class="egg-card" onclick="this.classList.toggle('expanded')">
+    <div class="egg-card-header">
+      <span class="egg-badge gold">S6赛季限定</span>
+      <h3>黄金鸟窝 — 价值超200万哈夫币</h3>
+    </div>
+    <p class="egg-value">奖励：200万+ 哈夫币 + 专属纪念徽章</p>
+    <div class="egg-detail">
+      <div style="margin-top:1.5rem">
+        <h4 style="color:var(--amber);margin-bottom:0.75rem;font-size:0.95rem">第一阶段：8个协议箱收集（跨5张地图）</h4>
+        <table class="info-table">
+          <thead><tr><th>地图</th><th>数量</th><th>关键点位</th></tr></thead>
+          <tbody>
+            <tr><td>零号大坝</td><td>2个</td><td>大坝顶下方需跳跃1个；二号密码门内1个</td></tr>
+            <tr><td>航天基地</td><td>2个</td><td>行政区周边；断桥区域</td></tr>
+            <tr><td>巴克什</td><td>2个</td><td>城墙断裂高塔旁1个；重生点附近1个</td></tr>
+            <tr><td>长弓溪谷</td><td>1个</td><td>储藏站周边固定刷新</td></tr>
+            <tr><td>潮汐监狱</td><td>1个</td><td>右侧海域两浮漂间沉船内（需潜水）</td></tr>
+          </tbody>
+        </table>
+
+        <h4 style="color:var(--amber);margin:1.5rem 0 0.75rem;font-size:0.95rem">第二阶段：长弓溪谷密室解密</h4>
+        <p style="color:var(--text-secondary);font-size:0.88rem;margin-bottom:0.75rem">
+          位置：地图右上角<strong>储藏站后方瀑布山洞</strong>
+        </p>
+        <div class="tip-box warn" style="margin:0 0 1rem">
+          <div class="tip-box-title">解密口诀</div>
+          <p style="font-family:'Orbitron',monospace;font-size:1.1rem;color:var(--amber);letter-spacing:2px">
+            "潮汐天天吧嗒" → TLSSBBDD
+          </p>
+        </div>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-bottom:0.5rem">
+          放置顺序：潮汐监狱 → 长弓溪谷 → 航天基地(2个) → 巴克什(2个) → 零号大坝(2个)
+        </p>
+
+        <h4 style="color:var(--red);margin:1.5rem 0 0.75rem;font-size:0.95rem">实战要点</h4>
+        <ul class="card-list">
+          <li>组队分工：1人带齐箱子，2人守洞口防伏击</li>
+          <li>必须自己携带鸟窝从撤离点撤出，队友捡取无效</li>
+          <li>撤离时限60秒倒计时</li>
+          <li>归属唯一：只有最先完成的队伍能领取</li>
+          <li>建议最后10分钟清图后再解密</li>
+        </ul>
+      </div>
+    </div>
+    <div class="egg-expand-hint">点击展开完整攻略 &#9662;</div>
+  </div>
+
+  <div class="egg-card" onclick="this.classList.toggle('expanded')">
+    <div class="egg-card-header">
+      <span class="egg-badge radio">全面战场</span>
+      <h3>断层地图 8 电台彩蛋</h3>
+    </div>
+    <p class="egg-value">奖励：坦克徽章 + 专属剧情</p>
+    <div class="egg-detail">
+      <div style="margin-top:1.5rem">
+        <div class="tip-box danger" style="margin-bottom:1rem">
+          <div class="tip-box-title">前置要求</div>
+          <p>必须4人组队 + 选择哈夫克阵营（防守方）+ 先到先得（激活4个电台后任务锁定）</p>
+        </div>
+
+        <h4 style="color:var(--purple);margin-bottom:0.75rem;font-size:0.95rem">北部区域（4个）</h4>
+        <ul class="card-list">
+          <li>F区破房子墙边</li>
+          <li>G区建筑顶端墙边</li>
+          <li>C3红房子右侧</li>
+          <li>重生点旁 — 需跳上破碎墙壁后的屋顶</li>
+        </ul>
+
+        <h4 style="color:var(--purple);margin:1rem 0 0.75rem;font-size:0.95rem">中心区域（2个）</h4>
+        <ul class="card-list">
+          <li>C2绿房子最深处</li>
+          <li>C1悬崖边墙角 — 需短暂走出地图边界，看到三棵树后在墙壁拐角处</li>
+        </ul>
+
+        <h4 style="color:var(--purple);margin:1rem 0 0.75rem;font-size:0.95rem">南部区域（3个）</h4>
+        <ul class="card-list">
+          <li>B区隧道右侧角落</li>
+          <li>E区城墙死角</li>
+          <li>A区山洞集装箱顶部 — 需通过滑索下到山洞内部</li>
+        </ul>
+
+        <h4 style="color:var(--accent);margin:1.5rem 0 0.75rem;font-size:0.95rem">彩蛋房开启</h4>
+        <p style="color:var(--text-secondary);font-size:0.88rem">
+          全部8个电台交互完成后，前往E点地下区域，找到墙壁上黑色箭头指向的红色大门，推门而入触发彩蛋剧情。
+        </p>
+      </div>
+    </div>
+    <div class="egg-expand-hint">点击展开完整攻略 &#9662;</div>
+  </div>
+
+  <div class="card-grid" style="margin-top:1.5rem">
+    <div class="card">
+      <div class="card-icon green">&#128038;</div>
+      <h3>树杈鸟窝彩蛋</h3>
+      <p>树杈上的鸟窝出货率比普通区域高3倍，经常刷新高价值稀有物品。</p>
+      <div class="tip-box success" style="margin-top:0.75rem">
+        <div class="tip-box-title">提示</div>
+        <p>注意观察高处树杈和路边井盖，这些都是高出货点位！</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-icon blue">&#128274;</div>
+      <h3>零号大坝密码门</h3>
+      <p>部分高级物资区域需要密码解锁，密码可通过地图内的线索拼凑获得。建议提前查阅密码攻略。</p>
+    </div>
+    <div class="card">
+      <div class="card-icon purple">&#128640;</div>
+      <h3>航天基地总裁区管道</h3>
+      <p>从楼梯侧边窗台跳跃进入"浮力"洞口，直通管道系统，可偷袭核心区守卫。</p>
+    </div>
+  </div>
+
+  <div class="tip-box warn" style="margin-top:1.5rem">
+    <div class="tip-box-title">彩蛋探索通用要点</div>
+    <p>协议箱可跨局收集，断层彩蛋需一局内完成。彩蛋点往往是交火重灾区，建议用侦查干员排查埋伏位置。团队协作是成败关键！</p>
+  </div>
+</section>
+
+<!-- FINAL TIPS -->
+<section id="tips" class="reveal">
+  <div class="section-header">
+    <div class="section-label">Phase 09 // Mastery</div>
+    <h2 class="section-title">从新手到大师：终极口诀</h2>
+  </div>
+
+  <div class="card-grid">
+    <div class="card" style="border-top:2px solid var(--green);text-align:center">
+      <div style="font-size:2rem;margin-bottom:0.5rem">&#9989;</div>
+      <h3>苟住发育 &gt; 无脑刚枪</h3>
+      <p>先搜够物资再考虑战斗</p>
+    </div>
+    <div class="card" style="border-top:2px solid var(--accent);text-align:center">
+      <div style="font-size:2rem;margin-bottom:0.5rem">&#127769;</div>
+      <h3>烟雾弹 = 第二条命</h3>
+      <p>能扔就扔，回血和撤退必备</p>
+    </div>
+    <div class="card" style="border-top:2px solid var(--amber);text-align:center">
+      <div style="font-size:2rem;margin-bottom:0.5rem">&#127908;</div>
+      <h3>报点比打字快10倍</h3>
+      <p>语音喊"西北300米，红甲！"</p>
+    </div>
+    <div class="card" style="border-top:2px solid var(--red);text-align:center">
+      <div style="font-size:2rem;margin-bottom:0.5rem">&#128683;</div>
+      <h3>别贪稀有武器</h3>
+      <p>没配件的橙武不如改好的基础枪</p>
+    </div>
+    <div class="card" style="border-top:2px solid var(--purple);text-align:center">
+      <div style="font-size:2rem;margin-bottom:0.5rem">&#128260;</div>
+      <h3>任务点远就重开</h3>
+      <p>不值得浪费时间</p>
+    </div>
+    <div class="card" style="border-top:2px solid var(--green);text-align:center">
+      <div style="font-size:2rem;margin-bottom:0.5rem">&#129309;</div>
+      <h3>团队协作 &gt; 个人英雄</h3>
+      <p>solo 很容易被淘汰</p>
+    </div>
+  </div>
+
+  <div class="route-box" style="margin-top:2.5rem">
+    <div class="route-title">
+      <span style="color:var(--accent)">&#9670;</span> 从入门到精通路线图
+    </div>
+    <div class="route-flow">
+      <div class="route-node start">新手教程</div>
+      <div class="route-arrow">&rarr;</div>
+      <div class="route-node mid">了解干员职业</div>
+      <div class="route-arrow">&rarr;</div>
+      <div class="route-node mid">研究武器改装</div>
+      <div class="route-arrow">&rarr;</div>
+      <div class="route-node mid">熟悉地图资源点</div>
+      <div class="route-arrow">&rarr;</div>
+      <div class="route-node mid">掌握三种模式</div>
+      <div class="route-arrow">&rarr;</div>
+      <div class="route-node end">持续练习提升</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>DELTA FORCE TACTICAL GUIDE &copy; 2026 | 数据来源：游戏实测 + 社区攻略整理</p>
+  <p style="margin-top:0.5rem">本攻略基于2025-2026年版本，游戏持续更新中，具体数据以游戏内为准</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
