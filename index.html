@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>三角洲行动 - 战术行动指南 | Delta Force Tactical Guide</title>
+<meta name="description" content="三角洲行动最全面的中文攻略指南，涵盖新手入门、干员解析、武器改装、进阶战术、地图攻略、S9赛季更新等。">
+<meta name="keywords" content="三角洲行动,Delta Force,攻略,干员,武器,烽火地带,全面战场,S9赛季">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,12 +13,18 @@
 <!-- NAV -->
 <nav>
   <div class="nav-logo">DELTA<span>FORCE</span></div>
-  <div class="nav-links">
+  <button class="nav-toggle" id="navToggle" aria-label="菜单">&#9776;</button>
+  <div class="nav-links" id="navLinks">
     <a href="#intro" class="active">入门</a>
     <a href="#modes">模式</a>
     <a href="#operators">干员</a>
     <a href="#weapons">武器</a>
     <a href="#advanced">进阶</a>
+    <a href="#maps">地图</a>
+    <a href="#story">世界观</a>
+    <a href="#updates">更新</a>
+    <a href="#videos">视频</a>
+    <a href="#faq">FAQ</a>
     <a href="#easter">彩蛋</a>
   </div>
   <div class="nav-progress" id="navProgress"></div>
@@ -25,7 +33,7 @@
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-grid"></div>
-  <div class="hero-badge">Tactical Operations Guide v3.0</div>
+  <div class="hero-badge">Tactical Operations Guide v4.0 — S9 "ECHO"</div>
   <h1><span class="outline">DELTA</span> FORCE<br><span class="accent">三角洲行动</span></h1>
   <p class="hero-sub">从零基础到战术大师的完整进阶路线。2035年近未来战场，搜索、战斗、撤离——每一次行动都是一场生死博弈。</p>
   <div class="hero-stats">
@@ -34,16 +42,20 @@
       <div class="hero-stat-label">核心模式</div>
     </div>
     <div class="hero-stat">
-      <div class="hero-stat-num">4</div>
+      <div class="hero-stat-num">10+</div>
       <div class="hero-stat-label">干员职业</div>
     </div>
     <div class="hero-stat">
-      <div class="hero-stat-num">5+</div>
+      <div class="hero-stat-num">7+</div>
       <div class="hero-stat-label">作战地图</div>
     </div>
     <div class="hero-stat">
       <div class="hero-stat-num">18</div>
       <div class="hero-stat-label">隐藏彩蛋</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">S9</div>
+      <div class="hero-stat-label">当前赛季</div>
     </div>
   </div>
   <div class="scroll-hint">
@@ -60,29 +72,39 @@
     <p class="section-desc">理解游戏核心机制，掌握基础操作，迈出成为战术干员的第一步。</p>
   </div>
 
+  <div class="tip-box danger" style="margin-bottom:2.5rem">
+    <div class="tip-box-title">核心认知：三角洲行动不是谁枪刚</div>
+    <p>胜负逻辑：<strong>会苟 + 会配合 + 会找钱 = 赢家</strong>。核心玩法是"搜打撤"——搜索、战斗、撤离，目的是赚钱，而非单纯击杀。<br><strong>阵亡则清空本局所有物资</strong>，仅安全箱物品保留！</p>
+  </div>
+
   <div class="progress-path">
     <div class="progress-step" data-color="green">
       <div class="step-dot">01</div>
-      <div class="step-title">完成新手教程</div>
-      <div class="step-desc">掌握移动、射击、视角切换</div>
+      <div class="step-title">理解核心逻辑</div>
+      <div class="step-desc">撤离 > 物资 > 击杀</div>
     </div>
     <div class="progress-step" data-color="green">
       <div class="step-dot">02</div>
+      <div class="step-title">完成新手教程</div>
+      <div class="step-desc">移动、射击、视角切换</div>
+    </div>
+    <div class="progress-step" data-color="blue">
+      <div class="step-dot">03</div>
       <div class="step-title">选择首发干员</div>
       <div class="step-desc">推荐支援兵"蜂医"</div>
     </div>
     <div class="progress-step" data-color="blue">
-      <div class="step-dot">03</div>
+      <div class="step-dot">04</div>
       <div class="step-title">装配低成本装备</div>
       <div class="step-desc">总造价控制在18万以内</div>
     </div>
-    <div class="progress-step" data-color="blue">
-      <div class="step-dot">04</div>
+    <div class="progress-step" data-color="amber">
+      <div class="step-dot">05</div>
       <div class="step-title">烽火地带实战</div>
       <div class="step-desc">搜打撤核心思路入门</div>
     </div>
     <div class="progress-step" data-color="amber">
-      <div class="step-dot">05</div>
+      <div class="step-dot">06</div>
       <div class="step-title">完成部门任务</div>
       <div class="step-desc">解锁武器与干员升级</div>
     </div>
@@ -132,24 +154,21 @@
     </div>
     <div class="card">
       <div class="card-icon purple">&#127968;</div>
-      <h3>低成本保命装备套餐</h3>
-      <p>总计不超过18万哈夫币，死10次才亏180万：</p>
+      <h3>5万起步最优配装</h3>
+      <p>新手低成本保命套餐，死10次才亏50万：</p>
       <ul class="card-list">
-        <li><strong>头盔</strong>：破损 HO9 五级头（约2万）</li>
-        <li><strong>胸挂</strong>：GIR 野战胸挂（约1万）</li>
-        <li><strong>背包</strong>：D3 战术背包 20格（约5万）</li>
-        <li><strong>护甲</strong>：最便宜三级甲（约10万）</li>
+        <li><strong>主武器</strong>：MP5白板（约1.1万）</li>
+        <li><strong>配件</strong>：消焰器（500）+ 30发PMAG弹夹 x2（1600）</li>
+        <li><strong>弹药</strong>：1级穿透弹60发（600）</li>
+        <li><strong>防具</strong>：1级头盔 + 1级防弹衣</li>
+        <li><strong>药品</strong>：1急救包 + 2绷带 + 1烟雾弹</li>
+        <li><strong>背包</strong>：15格无分隔绿包</li>
       </ul>
       <div class="tip-box warn" style="margin-top:1rem">
         <div class="tip-box-title">避坑提醒</div>
         <p>没配件的橙色稀有武器不如改好的基础枪！切勿盲目捡稀有武器。</p>
       </div>
     </div>
-  </div>
-
-  <div class="tip-box danger" style="margin-top:2rem">
-    <div class="tip-box-title">核心认知</div>
-    <p>三角洲行动的胜负逻辑不是"谁枪刚"，而是：<strong>会苟 + 会配合 + 会找钱 = 赢家</strong>。核心玩法是"搜打撤"——搜索、战斗、撤离，目的是赚钱，而非单纯击杀。</p>
   </div>
 </section>
 
@@ -174,35 +193,40 @@
   </div>
 
   <div class="level-content active" id="mode-havoc">
-    <div class="split">
-      <div>
-        <div class="card">
-          <div class="card-icon blue">&#127919;</div>
-          <h3>烽火地带 — 搜打撤核心</h3>
-          <p>3人小队战术生存玩法，类似《逃离塔科夫》。核心目标是搜刮资源并成功撤离。</p>
-          <div class="tip-box info" style="margin-top:1rem">
-            <div class="tip-box-title">推荐路线</div>
-            <p>西侧厂房 → 二楼保险箱（必出蓝紫色装备）→ 仓库区（医疗包、电子材料）</p>
-          </div>
-        </div>
+    <div class="card" style="border-top:2px solid var(--accent);margin-bottom:1.5rem">
+      <div class="card-icon blue">&#127919;</div>
+      <h3>烽火地带 — 搜打撤核心</h3>
+      <p>3人小队战术生存玩法，类似《逃离塔科夫》。核心目标是搜刮资源并成功撤离。死亡将丢失本局所有物资（仅安全箱保留）。</p>
+      <div class="tip-box info" style="margin-top:1rem">
+        <div class="tip-box-title">推荐搜刮路线</div>
+        <p>西侧厂房 → 二楼保险箱（必出蓝紫色装备）→ 仓库区（医疗包、电子材料）→ 撤离</p>
       </div>
-      <div>
-        <div class="card">
-          <div class="card-icon amber">&#128176;</div>
-          <h3>高价值地点</h3>
-          <table class="info-table">
-            <thead><tr><th>地点</th><th>产出</th></tr></thead>
-            <tbody>
-              <tr><td>水泥厂地下金库</td><td>瞄准镜、消音器（50万+）</td></tr>
-              <tr><td>大坝22号协议箱</td><td><span class="tag tag-amber">金条</span>（200-300万）</td></tr>
-              <tr><td>军营军械库</td><td>3级甲（150万）</td></tr>
-            </tbody>
-          </table>
+    </div>
+    <div class="split">
+      <div class="card">
+        <div class="card-icon amber">&#128176;</div>
+        <h3>高价值地点</h3>
+        <table class="info-table">
+          <thead><tr><th>地点</th><th>产出</th></tr></thead>
+          <tbody>
+            <tr><td>水泥厂地下金库</td><td>瞄准镜、消音器（50万+）</td></tr>
+            <tr><td>大坝22号协议箱</td><td><span class="tag tag-amber">金条</span>（200-300万）</td></tr>
+            <tr><td>军营军械库</td><td>3级甲（150万）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <div class="card-icon red">&#9888;</div>
+        <h3>搜打撤执行要领</h3>
+        <div class="article-text">
+          <p><strong style="color:var(--green)">搜：</strong>优先级：黄标保险/骇客电脑 > 3级甲/头盔 > 武器弹药 > 医疗品 > 普通物资。一个区域不超1分钟，搜完立刻转点。</p>
+          <p><strong style="color:var(--accent)">打：</strong>突发遇敌先丢烟雾弹 → 静步绕侧 → 瞄准头部连发 → 打完立刻换点。新手交火先蹲射（降后坐力、缩被击面积）。</p>
+          <p><strong style="color:var(--amber)">撤：</strong>开局先记撤离点，标记2-3个备选。背包价值达20万左右、倒计时前5分钟出发。到达撤离点先清AI、排查埋伏。</p>
         </div>
       </div>
     </div>
 
-    <div class="route-box">
+    <div class="route-box" style="margin-top:1.5rem">
       <div class="route-title">
         <span style="color:var(--green)">&#9679;</span> 撤离铁律
       </div>
@@ -219,9 +243,9 @@
       </div>
     </div>
 
-    <div class="tip-box warn">
+    <div class="tip-box warn" style="margin-top:1.5rem">
       <div class="tip-box-title">军营潜入技巧</div>
-      <p>千万别走正门！用手雷炸通风口进入，安全系数翻倍。撤离前提前规划路线，注意对局剩余时间。</p>
+      <p>千万别走正门！用手雷炸通风口进入，安全系数翻倍。贵重品（大红、门禁卡、曼德尔砖）搜到立即存安全箱，阵亡不丢失。</p>
     </div>
   </div>
 
@@ -302,7 +326,7 @@
         <thead><tr><th>干员</th><th>核心技能</th><th>战术定位</th></tr></thead>
         <tbody>
           <tr><td>威龙</td><td>虎蹲炮（5米击倒5秒）+ 磁吸炸弹</td><td>破防/突进</td></tr>
-          <tr><td>红狼</td><td>高爆发收割能力</td><td>正面收割</td></tr>
+          <tr><td>红狼</td><td>击杀回血 + 移速加成</td><td>正面收割</td></tr>
         </tbody>
       </table>
       <div class="tip-box danger" style="margin-top:0.75rem">
@@ -336,6 +360,7 @@
           <tr><td>露娜</td><td>侦察箭标记敌人</td><td>远程标记</td></tr>
           <tr><td>骷爪（麦晓雯）</td><td>被动加快静步速度</td><td>潜入搜刮</td></tr>
           <tr><td>银翼</td><td>无人机侦察</td><td>空中侦察</td></tr>
+          <tr><td class="new-badge-row"><span class="tag tag-amber">S9新</span> 回响</td><td>声呐探测 + 次声波干扰</td><td>声学情报</td></tr>
         </tbody>
       </table>
       <div class="tip-box info" style="margin-top:0.75rem">
@@ -379,6 +404,9 @@
     </button>
     <button class="level-tab" data-level="3" data-target="wp-budget">
       <span class="tab-num">3</span> AKS74U 低成本战神
+    </button>
+    <button class="level-tab" data-level="4" data-target="wp-s9new">
+      <span class="tab-num">4</span> S9新武器
     </button>
   </div>
 
@@ -447,6 +475,35 @@
       <div class="tip-box warn" style="margin-top:1rem">
         <div class="tip-box-title">适用人群</div>
         <p>零氪玩家快速成型、低段位上分、跑刀转战斗玩法的最佳过渡武器</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="level-content" id="wp-s9new">
+    <div class="card-grid">
+      <div class="card" style="border-top:2px solid var(--red)">
+        <div class="card-icon red">&#128163;</div>
+        <h3>巴雷特 M82A1 — S9赛季新武器</h3>
+        <p>半自动反器材重狙，使用 .50 BMG 口径弹药。</p>
+        <ul class="card-list">
+          <li>64米内胸部以上一枪必杀</li>
+          <li>可穿透掩体、击毁轻型载具</li>
+          <li>专属弹药：穿甲 / 创伤 / 停滞三种效果</li>
+        </ul>
+        <div class="tip-box danger" style="margin-top:0.75rem">
+          <div class="tip-box-title">弹药类型</div>
+          <p>M10 "RAZOR"（6级穿+延缓用药）| M3 "K-0"（6级穿+减速）| M903 SLAP（7级穿甲）</p>
+        </div>
+      </div>
+      <div class="card" style="border-top:2px solid var(--green)">
+        <div class="card-icon green">&#128165;</div>
+        <h3>战术十字弩 — S9赛季新增</h3>
+        <p>静音、无弹道，适合隐蔽偷袭。</p>
+        <ul class="card-list">
+          <li>完全无声，不暴露位置</li>
+          <li>适合摸金发育流、偷袭打法</li>
+          <li>搭配麦晓雯静步被动效果更佳</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -526,17 +583,6 @@
       10秒内突破任意卡点 | 2突击 + 1侦察 + 1支援
     </p>
   </div>
-
-  <div class="split" style="margin-top:1.5rem">
-    <div class="tip-box danger">
-      <div class="tip-box-title">排位连赢/连输调控</div>
-      <p>连赢3把 → 升档（全装猛攻）；连输2把 → 降档（裸装跑刀回血）。核心：避免上头梭哈。</p>
-    </div>
-    <div class="tip-box success">
-      <div class="tip-box-title">每日训练计划</div>
-      <p>训练场微操1小时/天 + 匹配实战3局/天。一周内从普通玩家蜕变。</p>
-    </div>
-  </div>
 </section>
 
 <!-- MAP TACTICS -->
@@ -602,6 +648,26 @@
         <li>注意暗角伏击，保持小碎步推进</li>
       </ul>
     </div>
+    <div class="card" style="border-left:3px solid var(--red)">
+      <h3><span class="tag tag-amber">S9新</span> 乌姆斯运河 — 水陆协同</h3>
+      <p style="color:var(--text-secondary);font-size:0.85rem;margin-bottom:0.75rem">全面战场新地图，港口+巨轮+水下通道</p>
+      <ul class="card-list">
+        <li>运河水系为核心，支持水陆协同作战</li>
+        <li>突击艇载具可快速转移兵力</li>
+        <li>水下通道适合侦察兵偷袭</li>
+        <li>回响干员声呐完美克制水下敌人</li>
+      </ul>
+    </div>
+    <div class="card" style="border-left:3px solid var(--green)">
+      <h3><span class="tag tag-amber">S9新</span> 核电站 — 极限生存</h3>
+      <p style="color:var(--text-secondary);font-size:0.85rem;margin-bottom:0.75rem">小而精的快节奏地图，高风险高回报</p>
+      <ul class="card-list">
+        <li><strong>辐射区</strong>：持续掉血但高物资产出</li>
+        <li><strong>信号屏蔽区</strong>：禁用小地图</li>
+        <li>仅2个撤离点，后期触发核爆倒计时</li>
+        <li>适合高段位玩家，新手慎入</li>
+      </ul>
+    </div>
   </div>
 
   <div class="tip-box info" style="margin-top:2rem">
@@ -610,10 +676,366 @@
   </div>
 </section>
 
+<!-- WORLD STORY -->
+<section id="story" class="reveal">
+  <div class="section-header">
+    <div class="section-label">Phase 07 // Lore</div>
+    <h2 class="section-title">世界观与剧情深度解析</h2>
+    <p class="section-desc">2035年近未来战场，三大势力博弈非洲国家阿萨拉。没有绝对的正义，也没有纯粹的邪恶。</p>
+  </div>
+
+  <div class="story-banner">
+    <div class="story-banner-text">
+      <div class="story-banner-label">THE WORLD OF</div>
+      <h2>DELTA FORCE</h2>
+      <p>2035 &middot; 阿萨拉共和国 &middot; 三方势力博弈</p>
+    </div>
+  </div>
+
+  <div class="card-grid" style="margin-top:2rem">
+    <div class="card" style="border-top:3px solid var(--accent)">
+      <div class="card-icon blue">&#127758;</div>
+      <h3>故事背景</h3>
+      <div class="article-text">
+        <p>2035年，非洲北部国家<strong>阿萨拉</strong>拥有丰富的自然资源和灿烂的历史文化。然而一场政变使该国陷入混乱。</p>
+        <p>全球第一科技巨头<strong>哈夫克集团 (HAAVK)</strong>趁机介入，以"维护秩序"为名控制当地资源。与此同时，地方武装<strong>阿萨拉卫队</strong>崛起，意图夺回主权。三方势力在这片土地上展开激烈博弈。</p>
+        <p style="color:var(--text-dim);font-style:italic;margin-top:0.75rem">"没有绝对的好人，也没有纯粹的恶棍。每个人都在为自己的信念而战。"</p>
+      </div>
+    </div>
+    <div class="card" style="border-top:3px solid var(--purple)">
+      <div class="card-icon purple">&#128218;</div>
+      <h3>阵营关系</h3>
+      <div class="article-text">
+        <p><strong style="color:var(--accent)">G.T.I.（全球应急行动组织）</strong> — 由三角洲特种部队演化而来的精英联盟，快速响应全球安全威胁。玩家扮演的角色隶属于此阵营。</p>
+        <p><strong style="color:var(--amber)">HAAVK（哈夫克集团）</strong> — 市值5万亿的科技巨头，掌控"曼德尔砖"超级计算单元。CEO雅各布·哈夫克认为人类需要强权领导。</p>
+        <p><strong style="color:var(--red)">阿萨拉卫队</strong> — "暴君"尤瑟夫·法西姆创建的地方武装联盟，5名手下分别控制阿萨拉5个区域。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:1.5rem;border-top:3px solid var(--amber)">
+    <div class="card-icon amber">&#128276;</div>
+    <h3>核心人物档案</h3>
+    <table class="info-table" style="margin-top:1rem">
+      <thead><tr><th>人物</th><th>阵营</th><th>身份</th><th>背景</th></tr></thead>
+      <tbody>
+        <tr><td><strong>雅各布·哈夫克</strong></td><td><span class="tag tag-amber">HAAVK</span></td><td>创始人/CEO</td><td>认为强权统治才能拯救人类，曼德尔砖的创造者</td></tr>
+        <tr><td><strong>尤瑟夫·法西姆</strong></td><td><span class="tag tag-red">阿萨拉卫队</span></td><td>创始人/"暴君"</td><td>军事强人，意图驱逐外国势力，恢复本土文化</td></tr>
+        <tr><td><strong>红狼</strong></td><td><span class="tag tag-blue">G.T.I.</span></td><td>突击干员</td><td>前三角洲队员，擅长正面突击与击杀回血</td></tr>
+        <tr><td><strong>蜂医（罗伊）</strong></td><td><span class="tag tag-green">G.T.I.</span></td><td>支援干员</td><td>战地医疗专家，激素枪技术独家研发</td></tr>
+        <tr><td><strong>露娜</strong></td><td><span class="tag tag-blue">G.T.I.</span></td><td>侦察干员</td><td>弓箭手出身，侦察箭可穿透障碍标记敌人</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tip-box warn" style="margin-top:1.5rem">
+    <div class="tip-box-title">深入了解</div>
+    <p>游戏剧情横跨四十年层层阴谋，把整个世界观染成灰色。如果你对背景故事感兴趣，推荐观看B站官方故事短片《起源赛季》。</p>
+  </div>
+</section>
+
+<!-- S9 UPDATES -->
+<section id="updates" class="reveal">
+  <div class="section-header">
+    <div class="section-label">Phase 08 // Patch Notes</div>
+    <h2 class="section-title">S9赛季「回声」更新日志</h2>
+    <p class="section-desc">2026年4月16日全面上线，赛季周期78天，预计7月3日结束。新增干员、地图、武器、模式。</p>
+  </div>
+
+  <div class="update-timeline">
+    <div class="update-item">
+      <div class="update-date">
+        <div class="update-date-day">04.16</div>
+        <div class="update-date-year">2026</div>
+      </div>
+      <div class="update-content">
+        <h3>S9赛季「回声」正式上线</h3>
+        <div class="update-tags">
+          <span class="tag tag-amber">重大更新</span>
+        </div>
+        <div class="article-text" style="margin-top:1rem">
+          <p><strong>新干员：回响（卢克·埃弗利）</strong> — 首个以"声音"为核心的侦察干员。前海军潜艇部队成员，精通声呐与声纹分析。</p>
+          <ul>
+            <li><strong>回声探测器</strong>：部署声呐装置，周期性扫描扇形区域，标记所有发出声响的敌人（穿透掩体）</li>
+            <li><strong>次声波干扰器</strong>：投掷后形成干扰区域，敌人减速、视野模糊、持续暴露位置</li>
+            <li><strong>复合型闪光弹</strong>：爆炸后对朝向闪光弹的敌人造成致盲</li>
+          </ul>
+          <p style="margin-top:1rem"><strong>新地图：</strong></p>
+          <ul>
+            <li><strong>乌姆斯运河</strong>（全面战场）：运河水系核心，港口+巨轮+水下通道，支持突击艇载具</li>
+            <li><strong>核电站</strong>（常规/机密）：小而精，含辐射区、信号屏蔽区，仅2个撤离点，后期核爆倒计时</li>
+          </ul>
+          <p style="margin-top:1rem"><strong>新武器：巴雷特 M82A1</strong> — .50口径反器材重狙，64米内胸部以上一枪必杀。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="update-item">
+      <div class="update-date">
+        <div class="update-date-day">04.30</div>
+        <div class="update-date-year">2026</div>
+      </div>
+      <div class="update-content">
+        <h3>烽火挑战模式开启</h3>
+        <div class="update-tags">
+          <span class="tag tag-green">新模式</span>
+        </div>
+        <div class="article-text" style="margin-top:1rem">
+          <p>27级以上玩家可参与的竞技模式，争夺并破译"烽火挑战砖"。</p>
+          <ul>
+            <li>初始3点破译灯，最多进行7局对战</li>
+            <li>独立仓库系统，配备高级安全箱</li>
+            <li>根据胜点结算奖励：AUG-猛攻皮肤、图灵砖、物流凭证</li>
+            <li>挑战砖被抢夺每次减少30秒破译时间（最低1分30秒）</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="update-item">
+      <div class="update-date">
+        <div class="update-date-day">活动</div>
+        <div class="update-date-year">持续</div>
+      </div>
+      <div class="update-content">
+        <h3>限时活动一览</h3>
+        <div class="article-text" style="margin-top:1rem">
+          <table class="info-table">
+            <thead><tr><th>活动名称</th><th>时间</th><th>核心奖励</th></tr></thead>
+            <tbody>
+              <tr><td>回声时刻</td><td>4/16 - 4/29</td><td>AUG-猛攻、图灵砖x5</td></tr>
+              <tr><td>新枪解锁-AR57</td><td>4/16 - 4/23</td><td>AR57制造/使用权</td></tr>
+              <tr><td>寻找乌小蛋</td><td>4/16 - 4/29</td><td>物流凭证</td></tr>
+              <tr><td>回声行动</td><td>4/16 - 6/25</td><td>传说近战"处刑者"</td></tr>
+              <tr><td>古墓丽影联动</td><td>赛季期间</td><td>露娜-劳拉皮肤、AKM-古墓丽影</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos" class="reveal">
+  <div class="section-header">
+    <div class="section-label">Phase 09 // Media</div>
+    <h2 class="section-title">视频攻略推荐</h2>
+    <p class="section-desc">精选官方宣传片与高质量攻略解说，快速掌握游戏要点。</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="card video-card">
+      <h3>&#127916; 官方宣传片</h3>
+      <p style="color:var(--text-dim);font-size:0.8rem;margin-bottom:0.75rem">了解游戏世界观的最佳入口</p>
+      <div class="video-links">
+        <a href="https://www.bilibili.com/video/BV1ecseeqEE3" target="_blank" rel="noopener" class="video-link-item">
+          <span class="video-link-icon">&#9654;</span>
+          <div>
+            <strong>起源赛季故事短片</strong>
+            <span>B站官方 — 2分30秒</span>
+          </div>
+        </a>
+        <a href="https://v.qq.com/x/cover/mzc00200f1jkgw7/c3540ms73bk.html" target="_blank" rel="noopener" class="video-link-item">
+          <span class="video-link-icon">&#9654;</span>
+          <div>
+            <strong>代号:Zero 测试宣传片</strong>
+            <span>腾讯视频 — 重建秩序</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="card video-card">
+      <h3>&#127916; 攻略解说</h3>
+      <p style="color:var(--text-dim);font-size:0.8rem;margin-bottom:0.75rem">快速提升实战技巧</p>
+      <div class="video-links">
+        <a href="https://space.bilibili.com/3494376565115651" target="_blank" rel="noopener" class="video-link-item">
+          <span class="video-link-icon">&#9654;</span>
+          <div>
+            <strong>三角洲行动官方B站</strong>
+            <span>最新活动、版本前瞻</span>
+          </div>
+        </a>
+        <a href="https://www.douyin.com/video/7440898624814468403" target="_blank" rel="noopener" class="video-link-item">
+          <span class="video-link-icon">&#9654;</span>
+          <div>
+            <strong>M1911实战解说</strong>
+            <span>3枪打死5套 | 抖音</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="card video-card">
+      <h3>&#127916; 新手必看</h3>
+      <p style="color:var(--text-dim);font-size:0.8rem;margin-bottom:0.75rem">从零开始的保姆级教学</p>
+      <div class="video-links">
+        <a href="https://www.bilibili.com/list/ml3377453686" target="_blank" rel="noopener" class="video-link-item">
+          <span class="video-link-icon">&#9654;</span>
+          <div>
+            <strong>新手教程合集</strong>
+            <span>B站 — 基础操作+配装</span>
+          </div>
+        </a>
+        <a href="https://www.douyin.com/video/7427898102641659186" target="_blank" rel="noopener" class="video-link-item">
+          <span class="video-link-icon">&#9654;</span>
+          <div>
+            <strong>武装直升机全攻略</strong>
+            <span>武直全局解说 | 抖音</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:1.5rem;border-left:3px solid var(--accent)">
+    <h3>&#128246; B站官方频道</h3>
+    <div class="article-text">
+      <p>关注三角洲行动B站官方账号 <a href="https://space.bilibili.com/3494376565115651" target="_blank" rel="noopener" style="color:var(--accent)">@三角洲行动</a>，第一时间获取版本更新公告、活动预告和官方攻略视频。</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="reveal">
+  <div class="section-header">
+    <div class="section-label">Phase 10 // FAQ</div>
+    <h2 class="section-title">新手常见问题</h2>
+    <p class="section-desc">汇总新手最常遇到的问题与解答，帮你快速避坑。</p>
+  </div>
+
+  <div class="faq-list">
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-question">
+        <span>Q: 死了会掉什么？安全箱是什么？</span>
+        <span class="faq-arrow">&#9662;</span>
+      </div>
+      <div class="faq-answer">
+        <p>阵亡后会丢失本局携带的所有武器、装备、物资。<strong>只有安全箱内的物品</strong>（贵重品如大红、门禁卡、曼德尔砖）会保留。所以搜到贵重品第一时间存安全箱！</p>
+      </div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-question">
+        <span>Q: 新手应该先玩哪个模式？</span>
+        <span class="faq-arrow">&#9662;</span>
+      </div>
+      <div class="faq-answer">
+        <p>推荐路线：<strong>全面战场（不掉装备）</strong>练基础 → <strong>烽火地带-常规模式（零号大坝）</strong>练搜打撤 → <strong>机密模式</strong>优化配装。前1-2天在全面战场熟悉操作和地图，不浪费装备。</p>
+      </div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-question">
+        <span>Q: 为什么总落地成盒？怎么选落点？</span>
+        <span class="faq-arrow">&#9662;</span>
+      </div>
+      <div class="faq-answer">
+        <p><strong>绝不跳</strong>热门区域：零号大坝核心区、巴克什集市、航天基地中心（人多必死）。<strong>优先选</strong>边缘区域：长弓溪谷西侧小屋、零号大坝北侧厂区、水泥厂外围。先苟后打，搜够再战。</p>
+      </div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-question">
+        <span>Q: 配件怎么选？为什么改了枪反而打不准？</span>
+        <span class="faq-arrow">&#9662;</span>
+      </div>
+      <div class="faq-answer">
+        <p>常见错误：步枪装8倍镜（中距离打不准）、冲锋枪装远程枪管（浪费射速优势）。<strong>原则</strong>：近战武器配低倍/镭射+消音，中距离配全息/红点+垂直补偿器，远程配高倍+重型枪管。新手选系统"新兵套装"最省心。</p>
+      </div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-question">
+        <span>Q: 怎么快速赚哈夫币？</span>
+        <span class="faq-arrow">&#9662;</span>
+      </div>
+      <div class="faq-answer">
+        <p>初期跑刀搜刮高价值物品（太阳能板1.2万、电子温度计1.5万、绿手术包1.8万），凑够20万就撤。每日任务清空（大量资源），拍卖行有4次减价机会。稳定日入300万不是梦。</p>
+      </div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-question">
+        <span>Q: 1级弹和3级甲有什么区别？</span>
+        <span class="faq-arrow">&#9662;</span>
+      </div>
+      <div class="faq-answer">
+        <p>弹药有穿透等级，护甲有防护等级。<strong>1级弹打3级甲基本无效</strong>（刮痧）。交战前检查弹药穿透等级是否足够。S9新增了多种高级弹药（最高7级穿），面对重甲敌人务必使用对应穿透等级弹药。</p>
+      </div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-question">
+        <span>Q: 游戏支持哪些平台？免费吗？</span>
+        <span class="faq-arrow">&#9662;</span>
+      </div>
+      <div class="faq-answer">
+        <p>《三角洲行动》支持 <strong>PC（WeGame/Steam）</strong> 和 <strong>移动端（iOS/Android）</strong>，2025年8月已登陆 PS5 和 Xbox 主机平台。游戏<strong>免费</strong>，含内购（皮肤通行证等，不影响平衡）。</p>
+      </div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-question">
+        <span>Q: S9赛季什么时候结束？</span>
+        <span class="faq-arrow">&#9662;</span>
+      </div>
+      <div class="faq-answer">
+        <p>S9赛季「回声」于2026年4月16日开启，赛季周期78天，<strong>预计2026年7月3日/7月上旬结束</strong>。无休赛期，将无缝衔接S10赛季。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7-DAY PLAN -->
+<section id="plan" class="reveal">
+  <div class="section-header">
+    <div class="section-label">Phase 11 // Training</div>
+    <h2 class="section-title">7天成长计划</h2>
+    <p class="section-desc">跟随这份计划，一周内从萌新蜕变为准高手。</p>
+  </div>
+
+  <div class="plan-grid">
+    <div class="plan-day">
+      <div class="plan-day-num">D1-2</div>
+      <div class="plan-day-content">
+        <h3>基础训练期</h3>
+        <ul class="card-list">
+          <li>玩<strong>全面战场</strong>（不掉装备），练灵敏度</li>
+          <li>熟悉2-3张核心地图布局</li>
+          <li>训练场练习压枪、换弹</li>
+          <li>目标：活过10分钟、不落地成盒</li>
+        </ul>
+      </div>
+    </div>
+    <div class="plan-day">
+      <div class="plan-day-num">D3-4</div>
+      <div class="plan-day-content">
+        <h3>搜打撤实战期</h3>
+        <ul class="card-list">
+          <li>打<strong>烽火地带-常规模式</strong>（零号大坝）</li>
+          <li>练习"搜-打-撤"完整流程</li>
+          <li>跟队混助攻，学老玩家走位</li>
+          <li>目标：每局成功撤离、收益5-10万</li>
+        </ul>
+      </div>
+    </div>
+    <div class="plan-day">
+      <div class="plan-day-num">D5-7</div>
+      <div class="plan-day-content">
+        <h3>进阶突破期</h3>
+        <ul class="card-list">
+          <li>尝试<strong>机密模式</strong>，优化配装</li>
+          <li>学习秒蹲摆头、滑铲腰射等身法</li>
+          <li>研究地图战术点位</li>
+          <li>目标：撤离率60%+、收益15万+</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip-box success" style="margin-top:2rem">
+    <div class="tip-box-title">官方助力资源</div>
+    <p>7天登录领CAR-15、3级包、大量货币 | 新手教程2.0（详解干员、配装、撤离机制）| 训练场优化（灵敏度测试、武器试射）| 社区"萌新帮扶频道"（资深玩家免费带飞）</p>
+  </div>
+</section>
+
 <!-- ECONOMY -->
 <section id="economy" class="reveal">
   <div class="section-header">
-    <div class="section-label">Phase 07 // Logistics</div>
+    <div class="section-label">Phase 12 // Logistics</div>
     <h2 class="section-title">经济系统与搬砖攻略</h2>
     <p class="section-desc">学会管理哈夫币，稳定日入300万不是梦。</p>
   </div>
@@ -656,7 +1078,7 @@
 <!-- EASTER EGGS -->
 <section id="easter" class="reveal">
   <div class="section-header">
-    <div class="section-label">Phase 08 // Secrets</div>
+    <div class="section-label">Phase 13 // Secrets</div>
     <h2 class="section-title">隐藏彩蛋全攻略</h2>
     <p class="section-desc">全地图共18个隐藏彩蛋，解锁专属枪械皮肤与稀有奖励。</p>
   </div>
@@ -772,24 +1194,19 @@
       <p>从楼梯侧边窗台跳跃进入"浮力"洞口，直通管道系统，可偷袭核心区守卫。</p>
     </div>
   </div>
-
-  <div class="tip-box warn" style="margin-top:1.5rem">
-    <div class="tip-box-title">彩蛋探索通用要点</div>
-    <p>协议箱可跨局收集，断层彩蛋需一局内完成。彩蛋点往往是交火重灾区，建议用侦查干员排查埋伏位置。团队协作是成败关键！</p>
-  </div>
 </section>
 
 <!-- FINAL TIPS -->
 <section id="tips" class="reveal">
   <div class="section-header">
-    <div class="section-label">Phase 09 // Mastery</div>
+    <div class="section-label">Phase 14 // Mastery</div>
     <h2 class="section-title">从新手到大师：终极口诀</h2>
   </div>
 
   <div class="card-grid">
     <div class="card" style="border-top:2px solid var(--green);text-align:center">
       <div style="font-size:2rem;margin-bottom:0.5rem">&#9989;</div>
-      <h3>苟住发育 &gt; 无脑刚枪</h3>
+      <h3>苟住发育 > 无脑刚枪</h3>
       <p>先搜够物资再考虑战斗</p>
     </div>
     <div class="card" style="border-top:2px solid var(--accent);text-align:center">
@@ -814,7 +1231,7 @@
     </div>
     <div class="card" style="border-top:2px solid var(--green);text-align:center">
       <div style="font-size:2rem;margin-bottom:0.5rem">&#129309;</div>
-      <h3>团队协作 &gt; 个人英雄</h3>
+      <h3>团队协作 > 个人英雄</h3>
       <p>solo 很容易被淘汰</p>
     </div>
   </div>
@@ -839,9 +1256,49 @@
   </div>
 </section>
 
+<!-- COMMUNITY -->
+<section id="community" class="reveal">
+  <div class="section-header">
+    <div class="section-label">Community</div>
+    <h2 class="section-title">社区与资源</h2>
+    <p class="section-desc">加入社区获取最新攻略、组队信息与版本讨论。</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="card community-card" onclick="window.open('https://space.bilibili.com/3494376565115651','_blank')">
+      <div class="card-icon blue">&#9654;</div>
+      <h3>B站官方账号</h3>
+      <p>@三角洲行动</p>
+      <span class="community-link">space.bilibili.com &#8599;</span>
+    </div>
+    <div class="card community-card" onclick="window.open('https://wiki.biligame.com/deltaoperation2024/','_blank')">
+      <div class="card-icon green">&#128214;</div>
+      <h3>BWIKI 百科</h3>
+      <p>最全面的中文游戏资料库</p>
+      <span class="community-link">wiki.biligame.com &#8599;</span>
+    </div>
+    <div class="card community-card" onclick="window.open('https://df.qq.com/','_blank')">
+      <div class="card-icon amber">&#127760;</div>
+      <h3>官方网站</h3>
+      <p>下载、公告、活动</p>
+      <span class="community-link">df.qq.com &#8599;</span>
+    </div>
+    <div class="card community-card" onclick="window.open('https://www.wegame.com.cn/store/2001918/Delta_Force_Hawk_Ops','_blank')">
+      <div class="card-icon purple">&#128187;</div>
+      <h3>WeGame 商店</h3>
+      <p>PC端下载与更新</p>
+      <span class="community-link">wegame.com.cn &#8599;</span>
+    </div>
+  </div>
+</section>
+
 <footer>
   <p>DELTA FORCE TACTICAL GUIDE &copy; 2026 | 数据来源：游戏实测 + 社区攻略整理</p>
-  <p style="margin-top:0.5rem">本攻略基于2025-2026年版本，游戏持续更新中，具体数据以游戏内为准</p>
+  <p style="margin-top:0.5rem">本攻略基于2025-2026年版本（S9赛季），游戏持续更新中，具体数据以游戏内为准</p>
+  <p style="margin-top:0.75rem;color:var(--text-dim)">
+    <a href="https://github.com/sat-xpi/GameSite" target="_blank" rel="noopener" style="color:var(--accent)">GitHub</a> &middot; 
+    最后更新：2026年5月
+  </p>
 </footer>
 
 <script src="script.js"></script>
