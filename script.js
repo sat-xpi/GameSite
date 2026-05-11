@@ -53,14 +53,18 @@ document.querySelectorAll('.level-tab').forEach(tab => {
 
 // FAQ toggle
 document.querySelectorAll('.faq-item').forEach(item => {
-  item.addEventListener('click', () => {
+  item.addEventListener('click', (e) => {
+    // 如果点击的是链接，不阻止默认行为
+    if (e.target.tagName === 'A') return;
     item.classList.toggle('open');
   });
 });
 
 // Easter egg toggle
 document.querySelectorAll('.egg-card').forEach(card => {
-  card.addEventListener('click', () => {
+  card.addEventListener('click', (e) => {
+    // 如果点击的是链接，不阻止默认行为
+    if (e.target.tagName === 'A') return;
     card.classList.toggle('expanded');
   });
 });

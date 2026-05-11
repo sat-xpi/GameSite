@@ -662,46 +662,54 @@ section {
   display: flex; gap: 0.5rem;
 }
 
-/* ===== VIDEO CARD ===== */
-.video-card h3 {
-  margin-bottom: 0;
+/* ===== VIDEO EMBED ===== */
+.video-embed-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.5rem;
 }
-.video-links {
-  margin-top: 1rem;
+.video-embed-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.75rem;
+}
+.video-embed-card h3 {
+  font-size: 1.05rem; font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.video-embed-list {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
-.video-link-item {
-  display: flex; align-items: center; gap: 0.75rem;
-  padding: 0.75rem 1rem;
-  background: rgba(0,212,255,0.05);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  text-decoration: none;
+.video-embed-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.video-embed-title {
+  font-size: 0.85rem; font-weight: 600;
   color: var(--text-primary);
-  transition: all 0.25s;
 }
-.video-link-item:hover {
-  background: rgba(0,212,255,0.1);
-  border-color: var(--border-accent);
-  transform: translateX(4px);
-}
-.video-link-icon {
-  width: 32px; height: 32px;
-  border-radius: 50%;
-  background: var(--accent-dim);
-  color: var(--accent);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 0.7rem;
-  flex-shrink: 0;
-}
-.video-link-item strong {
-  font-size: 0.88rem; font-weight: 600;
-  display: block;
-}
-.video-link-item span {
+.video-embed-source {
   font-size: 0.72rem; color: var(--text-dim);
+}
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #000;
+  margin-top: 0.5rem;
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
 }
 
 /* ===== FAQ ===== */
@@ -935,6 +943,7 @@ footer a { color: var(--accent); text-decoration: none; }
   .update-timeline { padding-left: 1.5rem; }
   .story-banner { padding: 2rem 1.5rem; }
   .plan-grid { grid-template-columns: 1fr; }
+  .video-embed-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
