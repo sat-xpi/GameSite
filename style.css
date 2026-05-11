@@ -805,10 +805,27 @@ section {
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
-  padding: 3rem 2rem;
+  padding: 2rem 2rem 3rem;
   border-top: 1px solid var(--border);
   color: var(--text-dim);
   font-size: 0.78rem;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.82rem;
+  transition: color 0.25s;
+  white-space: nowrap;
+}
+.footer-links a:hover {
+  color: var(--accent);
 }
 footer a { color: var(--accent); text-decoration: none; }
 
