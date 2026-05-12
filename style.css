@@ -1146,6 +1146,29 @@ footer {
   color: var(--text-dim);
   line-height: 1.7;
 }
+.footer-visitor {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  background: rgba(0,212,255,0.06);
+  border: 1px solid rgba(0,212,255,0.15);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+.footer-visitor strong {
+  color: var(--accent);
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+}
+.visitor-icon {
+  display: flex;
+  align-items: center;
+  color: var(--accent);
+  opacity: 0.7;
+}
 footer a { color: var(--accent); text-decoration: none; }
 
 /* ===== AD SLOTS ===== */
