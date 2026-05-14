@@ -82,12 +82,12 @@
       const href = link.getAttribute('href');
       if (!href) return;
       const linkPage = href.split('/').pop();
-      // 地图页面特殊处理
-      if (currentPage === 'maps.html' && href.endsWith('maps.html') && !href.includes('guide/')) {
-        link.classList.add('active');
-      } else if (currentPage === 'maps.html' && href.includes('guide/maps.html')) {
-        link.classList.add('active');
-      } else if (linkPage === currentPage) {
+
+      // 先清除所有 active（防止重复高亮）
+      link.classList.remove('active');
+
+      // 精确匹配当前页面文件名
+      if (linkPage === currentPage) {
         link.classList.add('active');
       }
     });
