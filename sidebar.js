@@ -75,26 +75,36 @@
     container.innerHTML = sidebarHTML;
   }
 
-  // 高亮当前页面（用完整路径解析，防止同名文件误判）
+  // 高亮当前页面（用 newURL 解析相对路径，防同名文件误判 + 防重复保护）
   function highlightCurrentPage() {
+    const currentPath = window.location.pathname;
     const links = document.querySelectorAll('#sidebarNav a');
+
     links.forEach(link => {
+      link.classList.remove('active');
       const href = link.getAttribute('href');
       if (!href) return;
 
-      // 先清除所有 active（防止重复高亮）
-      link.classList.remove('active');
-
-      // 创建临时 a 标签解析相对路径为绝对路径，再比较 pathname
-      const tempA = document.createElement('a');
-      tempA.href = href;
-      const linkPath = tempA.pathname.replace(/\/$/, '');   // 去掉末尾 /
-      const currentPath = window.location.pathname.replace(/\/$/, '');
-
-      if (linkPath === currentPath) {
-        link.classList.add('active');
+      try {
+        const linkUrl = new URL(href, window.location.href);
+        if (linkUrl.pathname === currentPath) {
+          link.classList.add('active');
+        }
+      } catch (e) {
+        // 降级：直接比较文件名
+        if (href.split('/').pop() === currentPath.split('/').pop()) {
+          link.classList.add('active');
+        }
       }
     });
+
+    // 防重复保护：万一仍匹配多个，只保留第一个
+    const actives = document.querySelectorAll('#sidebarNav a.active');
+    if (actives.length > 1) {
+      for (let i = 1; i < actives.length; i++) {
+        actives[i].classList.remove('active');
+      }
+    }
   }
 
   // 绑定移动端侧边栏开关

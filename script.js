@@ -17,7 +17,7 @@ if (sidebarOverlay) {
   sidebarOverlay.addEventListener('click', closeSidebar);
 }
 
-// Sidebar nav active link tracking
+// Sidebar nav active link tracking (锚点滚动高亮，不干扰页面导航链接)
 const sections = document.querySelectorAll('section[id]');
 const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
 function updateActiveLink() {
@@ -26,8 +26,10 @@ function updateActiveLink() {
     if (window.scrollY >= s.offsetTop - 120) current = s.id;
   });
   sidebarLinks.forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href || !href.startsWith('#')) return; // 跳过页面导航链接
     a.classList.remove('active');
-    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+    if (href === '#' + current) a.classList.add('active');
   });
 }
 window.addEventListener('scroll', updateActiveLink);
