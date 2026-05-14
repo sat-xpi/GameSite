@@ -365,17 +365,25 @@ section {
 }
 .card:hover::before { opacity: 1; }
 .card-icon {
-  width: 42px; height: 42px;
-  border-radius: 10px;
+  width: 36px; height: 36px;
+  border-radius: 6px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
+  font-weight: 700;
   margin-bottom: 1rem;
+  background: rgba(255,255,255,0.04);
+  color: var(--text-secondary);
+  border: 1px solid rgba(255,255,255,0.06);
 }
-.card-icon.blue { background: rgba(0,212,255,0.1); color: var(--accent); }
-.card-icon.green { background: rgba(46,213,115,0.1); color: var(--green); }
-.card-icon.red { background: rgba(255,71,87,0.1); color: var(--red); }
-.card-icon.amber { background: rgba(255,165,2,0.1); color: var(--amber); }
-.card-icon.purple { background: rgba(168,85,247,0.1); color: var(--purple); }
+.card-icon.blue,
+.card-icon.green,
+.card-icon.red,
+.card-icon.amber,
+.card-icon.purple {
+  background: rgba(255,255,255,0.04);
+  color: var(--text-secondary);
+  border: 1px solid rgba(255,255,255,0.06);
+}
 .card h3 {
   font-size: 1.05rem; font-weight: 700;
   margin-bottom: 0.5rem;
