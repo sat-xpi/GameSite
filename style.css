@@ -104,10 +104,15 @@ body {
 }
 .sidebar-nav a::before {
   content: attr(data-icon);
-  font-size: 0.85rem;
-  width: 1.2rem;
+  font-size: 0.7rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  line-height: 1.1rem;
   text-align: center;
   flex-shrink: 0;
+  background: rgba(255,255,255,0.04);
+  border-radius: 4px;
+  filter: grayscale(0.6) brightness(0.9);
 }
 .sidebar-footer {
   padding: 0.75rem 1rem;

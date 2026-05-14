@@ -24,34 +24,34 @@
   <div class="sidebar-nav" id="sidebarNav">
     <div class="sidebar-group">
       <div class="sidebar-group-label">基础</div>
-      <a href="${guide}beginner.html" data-icon="📖">入门</a>
-      <a href="${guide}modes.html" data-icon="🎮">模式</a>
-      <a href="${guide}operators.html" data-icon="👤">干员</a>
-      <a href="${base}maps.html" data-icon="🗺">地图攻略</a>
-      <a href="${guide}weapons.html" data-icon="🔫">武器</a>
+      <a href="${guide}beginner.html" data-icon="▣">入门</a>
+      <a href="${guide}modes.html" data-icon="◈">模式</a>
+      <a href="${guide}operators.html" data-icon="◉">干员</a>
+      <a href="${base}maps.html" data-icon="▦">地图攻略</a>
+      <a href="${guide}weapons.html" data-icon="▸">武器</a>
     </div>
     <div class="sidebar-group">
       <div class="sidebar-group-label">进阶</div>
-      <a href="${guide}advanced.html" data-icon="⚡">进阶</a>
-      <a href="${base}guide/maps.html" data-icon="🗺">高级地图</a>
-      <a href="${guide}lore.html" data-icon="📜">世界观</a>
+      <a href="${guide}advanced.html" data-icon="◆">进阶</a>
+      <a href="${base}guide/maps.html" data-icon="▦">高级地图</a>
+      <a href="${guide}lore.html" data-icon="◐">世界观</a>
     </div>
     <div class="sidebar-group">
       <div class="sidebar-group-label">资源</div>
-      <a href="${guide}updates.html" data-icon="📋">更新</a>
-      <a href="${guide}videos.html" data-icon="🎬">视频</a>
-      <a href="${guide}faq.html" data-icon="❓">FAQ</a>
-      <a href="${guide}plan.html" data-icon="📊">计划</a>
-      <a href="${guide}economy.html" data-icon="💰">经济</a>
-      <a href="${guide}easter-eggs.html" data-icon="🥚">彩蛋</a>
-      <a href="${guide}tips.html" data-icon="💡">口诀</a>
-      <a href="${guide}community.html" data-icon="🌐">社区</a>
+      <a href="${guide}updates.html" data-icon="▤">更新</a>
+      <a href="${guide}videos.html" data-icon="▶">视频</a>
+      <a href="${guide}faq.html" data-icon="?">FAQ</a>
+      <a href="${guide}plan.html" data-icon="▧">计划</a>
+      <a href="${guide}economy.html" data-icon="$">经济</a>
+      <a href="${guide}easter-eggs.html" data-icon="*">彩蛋</a>
+      <a href="${guide}tips.html" data-icon="!">口诀</a>
+      <a href="${guide}community.html" data-icon="◎">社区</a>
     </div>
     <div class="sidebar-group">
       <div class="sidebar-group-label">关于</div>
-      <a href="${base}privacy.html" data-icon="🔒">隐私政策</a>
-      <a href="${base}disclaimer.html" data-icon="⚖">免责声明</a>
-      <a href="${base}about.html" data-icon="ℹ">关于本站</a>
+      <a href="${base}privacy.html" data-icon="◊">隐私政策</a>
+      <a href="${base}disclaimer.html" data-icon="◘">免责声明</a>
+      <a href="${base}about.html" data-icon="i">关于本站</a>
     </div>
   </div>
   <div class="sidebar-footer">
