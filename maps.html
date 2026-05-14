@@ -2,95 +2,219 @@
 <html lang="zh-CN">
 <head>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>地图攻略 - 三角洲行动攻略大全</title>
-  <meta name="description" content="三角洲行动官方地图工具，包含零号大坝、巴克什、长弓溪谷、航天基地等地图的完整点位标注。">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .map-container {
-      width: 100%;
-      height: calc(100vh - 80px);
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
-    .map-container iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-    .map-notice {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1rem 1.5rem;
-      margin: 1rem auto;
-      max-width: 1200px;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-    }
-    .map-notice-icon {
-      font-size: 1.2rem;
-    }
-    .map-notice a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    .map-notice a:hover {
-      text-decoration: underline;
-    }
-  </style>
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>地图攻略 - 三角洲行动攻略大全</title>
+<meta name="description" content="三角洲行动地图全攻略，零号大坝、长弓溪谷、航天基地、巴克什等地图战术路线与关键点位。">
+<link rel="canonical" href="https://gamesite.top/maps.html">
+<link rel="stylesheet" href="style.css">
+
 </head>
-<body>
-  <!-- 导航栏 -->
-  <nav class="navbar">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <span class="logo-icon">◆</span> 三角洲战术指南
-      </a>
-      <div class="nav-links">
-        <a href="index.html" class="nav-link">首页</a>
-        <a href="operators.html" class="nav-link">干员解析</a>
-        <a href="maps.html" class="nav-link active">地图攻略</a>
-        <a href="weapons.html" class="nav-link">武器改装</a>
-        <a href="guides.html" class="nav-link">进阶技巧</a>
-        <a href="about.html" class="nav-link">关于</a>
-      </div>
+<body style="overflow-x:hidden;">
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo"><a href="index.html" style="text-decoration:none;color:inherit;">DELTA<span>FORCE</span></a></div>
+  <div class="sidebar-nav" id="sidebarNav">
+    <div class="sidebar-group">
+      <div class="sidebar-group-label">基础</div>
+      <a href="guide/beginner.html" data-icon="📖">入门</a>
+      <a href="guide/modes.html" data-icon="🎮">模式</a>
+      <a href="guide/operators.html" data-icon="👤">干员</a>
+      <a href="maps.html" class="active" data-icon="🗺">地图</a>
+      <a href="guide/weapons.html" data-icon="🔫">武器</a>
     </div>
-  </nav>
-
-  <!-- 提示信息 -->
-  <div class="map-notice">
-    <span class="map-notice-icon">ℹ️</span>
-    <span>以下内容为<strong>三角洲行动官方地图工具</strong>，支持地图缩放、点位查看、路线规划等功能。如需全屏查看，请访问 <a href="https://df.qq.com/cp/a20240729directory/" target="_blank">官方网站 ↗</a></span>
-  </div>
-
-  <!-- 地图嵌入 -->
-  <div class="map-container">
-    <iframe 
-      src="https://df.qq.com/cp/a20240729directory/" 
-      title="三角洲行动官方地图工具"
-      allowfullscreen>
-    </iframe>
-  </div>
-
-  <!-- 页脚 -->
-  <div class="footer-section">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <span class="logo-icon">◆</span> 三角洲战术指南
-      </div>
-      <div class="footer-links">
-        <a href="privacy.html">隐私政策</a>
-        <a href="disclaimer.html">免责声明</a>
-        <a href="about.html">联系我们</a>
-      </div>
-      <div class="footer-copy">© 2024 三角洲战术指南. 本站为粉丝制作，与游戏官方无关。</div>
+    <div class="sidebar-group">
+      <div class="sidebar-group-label">进阶</div>
+      <a href="guide/advanced.html" data-icon="⚡">进阶</a>
+      <a href="guide/lore.html" data-icon="📜">世界观</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-group-label">资源</div>
+      <a href="guide/updates.html" data-icon="📋">更新</a>
+      <a href="guide/videos.html" data-icon="🎬">视频</a>
+      <a href="guide/faq.html" data-icon="❓">FAQ</a>
+      <a href="guide/plan.html" data-icon="📊">计划</a>
+      <a href="guide/economy.html" data-icon="💰">经济</a>
+      <a href="guide/easter-eggs.html" data-icon="🥚">彩蛋</a>
+      <a href="guide/tips.html" data-icon="💡">口诀</a>
+      <a href="guide/community.html" data-icon="🌐">社区</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-group-label">关于</div>
+      <a href="privacy.html" data-icon="🔒">隐私政策</a>
+      <a href="disclaimer.html" data-icon="⚖">免责声明</a>
+      <a href="about.html" data-icon="ℹ">关于本站</a>
     </div>
   </div>
+  <div class="sidebar-footer">
+    <a href="about.html">关于</a>
+    <a href="privacy.html">隐私</a>
+    <a href="disclaimer.html">免责</a>
+    <a href="https://github.com/sat-xpi/GameSite" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</aside>
+
+<div class="mobile-header" id="mobileHeader">
+  <div class="sidebar-logo"><a href="index.html" style="text-decoration:none;color:inherit;">DELTA<span>FORCE</span></a></div>
+  <button class="sidebar-toggle" id="sidebarToggle" aria-label="菜单">&#9776;</button>
+</div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<main class="main-content">
+  <div class="container" style="max-width:900px;margin:0 auto;padding:20px;">
+    <section id="maps" class="reveal visible">
+<div class="section-header">
+    <div class="section-label">Phase 06 // Tactical</div>
+    <h2 class="section-title">地图攻略：战术路线与点位</h2>
+    <p class="section-desc">掌握每张地图的核心路线与关键点位，提升搜打撤效率。</p>
+  </div>
+
+  <div class="map-grid">
+    <div class="map-card" style="border-top:3px solid var(--accent);">
+      <div class="map-card-header">
+        <img src="images/map-zerohdam.jpg" alt="零号大坝地图" style="width:100%;border-radius:8px;margin:1rem 0;">
+        <h3>零号大坝 <span class="tag tag-basic">推荐新手</span> <span class="tag tag-amber">S9更新</span></h3>
+        <p style="color:var(--text-dim);font-size:0.8rem;">S9赛季重做，新增水域区域，适合新手练习搜打撤</p>
+      </div>
+      <ul class="card-list" style="margin-top:1rem;">
+        <li><strong>推荐路线</strong>：水电站 → 办公楼 → 大坝顶部 → 河滩扩建区（S9新增）</li>
+        <li><strong>高价值点</strong>：22号协议箱（大坝底部）、保险箱（办公楼）、藏宝堆（S9新增）</li>
+        <li><strong>撤离点</strong>：3个（大坝顶部、西侧桥下、南侧山谷）</li>
+        <li><strong>注意事项</strong>：大坝顶部狙击点很多，新手慎去；S9新增水域区域，注意水下敌人</li>
+      </ul>
+      <div class="tip-box info" style="margin-top:0.75rem;">
+        <div class="tip-box-title">新手路线</div>
+        <p>水电 → 办公 → 搜完就撤，不要贪心去大坝顶部。</p>
+      </div>
+    </div>
+
+    <div class="map-card" style="border-top:3px solid var(--green);">
+      <div class="map-card-header">
+        <img src="images/map-changgong.jpg" alt="长弓溪谷地图" style="width:100%;border-radius:8px;margin:1rem 0;">
+        <h3>长弓溪谷 <span class="tag tag-basic">开阔地形</span></h3>
+        <p style="color:var(--text-dim);font-size:0.8rem;">村庄+山谷混合地形，适合中距离交战</p>
+      </div>
+      <ul class="card-list" style="margin-top:1rem;">
+        <li><strong>推荐路线</strong>：东部村庄 → 商店 → 储藏站</li>
+        <li><strong>高价值点</strong>：储藏站后方瀑布山洞（彩蛋）</li>
+        <li><strong>撤离点</strong>：北部桥下、直升机撤离</li>
+        <li><strong>注意事项</strong>：山谷开阔地，被狙击手锁定概率高</li>
+      </ul>
+      <div class="tip-box warn" style="margin-top:0.75rem;">
+        <div class="tip-box-title">危险区域</div>
+        <p>中心广场是热门交火区，建议绕路。</p>
+      </div>
+    </div>
+
+    <div class="map-card" style="border-top:3px solid var(--amber);">
+      <div class="map-card-header">
+        <img src="images/map-hangtian.jpg" alt="航天基地地图" style="width:100%;border-radius:8px;margin:1rem 0;">
+        <h3>航天基地 <span class="tag tag-advanced">高危险</span></h3>
+        <p style="color:var(--text-dim);font-size:0.8rem;">物资最丰富，但守卫最多，适合高手</p>
+      </div>
+      <ul class="card-list" style="margin-top:1rem;">
+        <li><strong>推荐路线</strong>：行政区 → 总裁区 → 发射台</li>
+        <li><strong>高价值点</strong>：总裁区（出金条）、管道系统（偷袭路径）</li>
+        <li><strong>撤离点</strong>：基地东侧、南侧门</li>
+        <li><strong>注意事项</strong>：行政区AI守卫密度极高，需要团队配合</li>
+      </ul>
+      <div class="tip-box danger" style="margin-top:0.75rem;">
+        <div class="tip-box-title">高危预警</div>
+        <p>航天基地中心区域是全图最危险的地方，新手慎入。</p>
+      </div>
+    </div>
+
+    <div class="map-card" style="border-top:3px solid var(--purple);">
+      <div class="map-card-header">
+        <h3>巴克什 <span class="tag tag-advanced">城市战</span></h3>
+        <p style="color:var(--text-dim);font-size:0.8rem;">城市地形，适合CQB（室内近距离战斗）训练</p>
+      </div>
+      <ul class="card-list" style="margin-top:1rem;">
+        <li><strong>推荐路线</strong>：集市 → 城墙 → 南部住宅区</li>
+        <li><strong>高价值点</strong>：城墙断裂高塔（协议箱）、集市地下室</li>
+        <li><strong>撤离点</strong>：北侧门、东侧小巷</li>
+        <li><strong>注意事项</strong>：城墙断裂处是热门狙击点</li>
+      </ul>
+      <div class="tip-box info" style="margin-top:0.75rem;">
+        <div class="tip-box-title">城市战技巧</div>
+        <p>巴克什适合练习室内清房，对提升CQB能力很有帮助。</p>
+      </div>
+    </div>
+
+    <div class="map-card" style="border-top:3px solid var(--red);">
+      <div class="map-card-header">
+        <h3><span class="tag tag-amber">S9新</span> 乌姆斯运河 <span class="tag tag-advanced">水陆协同</span></h3>
+        <p style="color:var(--text-dim);font-size:0.8rem;">全面战场新地图，港口+巨轮+水下通道</p>
+      </div>
+      <ul class="card-list" style="margin-top:1rem;">
+        <li><strong>特色</strong>：运河水系为核心，支持水陆协同作战</li>
+        <li><strong>推荐载具</strong>：突击艇（快速转移兵力）</li>
+        <li><strong>战术要点</strong>：水下通道适合侦察兵偷袭</li>
+        <li><strong>回响优势</strong>：声呐探测完美克制水下敌人</li>
+      </ul>
+      <div class="tip-box success" style="margin-top:0.75rem;">
+        <div class="tip-box-title">新地图优势</div>
+        <p>乌姆斯运河是S9新增地图，很多老玩家还不熟悉，趁机练习可占先机。</p>
+      </div>
+    </div>
+
+    <div class="map-card" style="border-top:3px solid var(--green);">
+      <div class="map-card-header">
+        <h3><span class="tag tag-amber">S9新</span> 核电站 <span class="tag tag-advanced">极限生存</span></h3>
+        <p style="color:var(--text-dim);font-size:0.8rem;">小而精的快节奏地图，高风险高回报</p>
+      </div>
+      <ul class="card-list" style="margin-top:1rem;">
+        <li><strong>特色</strong>：辐射区持续掉血但高物资产出</li>
+        <li><strong>信号屏蔽区</strong>：禁用小地图，纯靠听觉和标记</li>
+        <li><strong>撤离点</strong>：仅2个，后期触发核爆倒计时</li>
+        <li><strong>适合人群</strong>：高段位玩家，新手慎入</li>
+      </ul>
+      <div class="tip-box warn" style="margin-top:0.75rem;">
+        <div class="tip-box-title">核爆机制</div>
+        <p>游戏后期会触发核爆倒计时，必须在限定时间内撤离，否则全员阵亡。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ad-slot ad-content-inline">
+    <div class="ad-placeholder">
+      <span class="ad-tag">广告</span>
+      <span class="ad-text">336 x 280 广告位</span>
+    </div>
+  </div>
+
+  <div class="tip-box info" style="margin-top:2rem;">
+    <div class="tip-box-title">物资优先级</div>
+    <p>武器 → 5级以上护甲 → 核心配件 → 药品 → 烟雾弹（必带2个）→ 手雷。背包不塞满低价值物资，预留空间捡金/红品。</p>
+  </div>
+
+  <!-- 相关攻略 -->
+  <div style="margin-top:2.5rem;padding:1.5rem;background:var(--bg-card);border-radius:12px;border:1px solid var(--border);">
+    <h3 style="font-size:1rem;font-weight:700;margin-bottom:1rem;color:var(--accent);">相关攻略</h3>
+    <ul class="card-list">
+      <li><a href="guide/beginner.html" style="color:var(--accent);text-decoration:none;">新手入门</a> — 理解搜打撤基础</li>
+      <li><a href="guide/advanced.html" style="color:var(--accent);text-decoration:none;">进阶战术</a> — 提升地图实战能力</li>
+      <li><a href="guide/modes.html" style="color:var(--accent);text-decoration:none;">游戏模式</a> — 不同模式的地图策略</li>
+      <li><a href="guide/lore.html" style="color:var(--accent);text-decoration:none;">世界观</a> — 地图背后的故事</li>
+    </ul>
+  </div>
+</section>
+  </div>
+</main>
+
+<button id="backToTop" class="back-to-top" title="回到顶部">&#8593;</button>
+
+<footer>
+  <div class="footer-inner">
+    <p>DELTA FORCE TACTICAL GUIDE &copy; 2026 | <a href="privacy.html">隐私政策</a> | <a href="disclaimer.html">免责声明</a> | <a href="about.html">关于本站</a></p>
+    <p style="margin-top:0.5rem;color:var(--text-dim)">《三角洲行动》为腾讯旗下琳琅天上工作室开发，本站为玩家自发创建的攻略站，与官方无隶属关系。</p>
+  </div>
+</footer>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
