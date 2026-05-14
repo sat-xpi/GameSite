@@ -11,7 +11,7 @@
   <style>
     .map-container {
       width: 100%;
-      height: calc(100vh - 110px);
+      height: calc(100vh - 90px);
       margin: 0;
       padding: 0;
       overflow: hidden;
@@ -25,18 +25,42 @@
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 0.75rem 1.2rem;
-      margin: 70px auto 0.5rem;
+      padding: 0.5rem 1rem;
+      margin: 58px auto 0.25rem;
       max-width: 1200px;
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      font-size: 0.82rem;
+      gap: 0.5rem;
+      font-size: 0.8rem;
       color: var(--text-secondary);
+      position: relative;
+      transition: opacity 0.3s, transform 0.3s;
     }
-    .map-notice-icon { font-size: 1.1rem; }
+    .map-notice.hidden {
+      opacity: 0;
+      transform: translateY(-10px);
+      pointer-events: none;
+      height: 0;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      border: none;
+    }
+    .map-notice-icon { font-size: 1rem; }
     .map-notice a { color: var(--accent); text-decoration: none; }
     .map-notice a:hover { text-decoration: underline; }
+    .map-notice-close {
+      margin-left: auto;
+      background: none;
+      border: none;
+      color: var(--text-dim);
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 0 0.25rem;
+      line-height: 1;
+      transition: color 0.2s;
+    }
+    .map-notice-close:hover { color: var(--text-primary); }
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295418842606224" crossorigin="anonymous"></script>
 </head>
@@ -49,9 +73,10 @@
 <!-- MAIN CONTENT -->
 <div class="main-content" id="mainContent" style="overflow:hidden;">
   <!-- 提示信息 -->
-  <div class="map-notice">
+  <div class="map-notice" id="mapNotice">
     <span class="map-notice-icon">ℹ️</span>
     <span>以下内容为<strong>三角洲行动官方地图工具</strong>（进阶用）。支持缩放、点位查看、路线规划。基础文字攻略请点击左侧 <a href="../maps.html">🗺 地图（入门）</a></span>
+    <button class="map-notice-close" onclick="document.getElementById('mapNotice').classList.add('hidden')" aria-label="关闭提示">✕</button>
   </div>
 
   <!-- 地图嵌入 -->
