@@ -9,9 +9,15 @@
   <link rel="canonical" href="https://gamesite.top/guide/maps.html">
   <link rel="stylesheet" href="../style.css">
   <style>
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
     .map-container {
-      width: 100%;
-      height: calc(100vh - 90px);
+      flex: 1;
+      min-height: 0;
       margin: 0;
       padding: 0;
       overflow: hidden;
@@ -25,16 +31,18 @@
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 2.5rem 0.5rem 1rem;
       margin: 58px auto 0.25rem;
       max-width: 1200px;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 0.5rem;
       font-size: 0.8rem;
       color: var(--text-secondary);
       position: relative;
-      transition: opacity 0.3s, transform 0.3s;
+      transition: opacity 0.3s, transform 0.3s, margin 0.3s, padding 0.3s;
+      flex-shrink: 0;
     }
     .map-notice.hidden {
       opacity: 0;
@@ -42,15 +50,15 @@
       pointer-events: none;
       height: 0;
       padding: 0;
-      margin: 8px 0 0 0;
+      margin: 0 auto;
       overflow: hidden;
       border: none;
     }
-    .map-notice-icon { font-size: 1rem; }
-    .map-notice a { color: var(--accent); text-decoration: none; }
-    .map-notice a:hover { text-decoration: underline; }
     .map-notice-close {
-      margin-left: auto;
+      position: absolute;
+      right: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
       background: none;
       border: none;
       color: var(--text-dim);
@@ -60,6 +68,9 @@
       line-height: 1;
       transition: color 0.2s;
     }
+    .map-notice-icon { font-size: 1rem; }
+    .map-notice a { color: var(--accent); text-decoration: none; }
+    .map-notice a:hover { text-decoration: underline; }
     .map-notice-close:hover { color: var(--text-primary); }
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295418842606224" crossorigin="anonymous"></script>
@@ -71,7 +82,7 @@
 <!-- SIDEBAR -->
 <!-- MOBILE HEADER -->
 <!-- MAIN CONTENT -->
-<div class="main-content" id="mainContent" style="overflow:hidden;">
+<div class="main-content" id="mainContent">
   <!-- 提示信息 -->
   <div class="map-notice" id="mapNotice">
     <span class="map-notice-icon">ℹ️</span>
