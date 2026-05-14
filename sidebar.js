@@ -75,19 +75,23 @@
     container.innerHTML = sidebarHTML;
   }
 
-  // 高亮当前页面
+  // 高亮当前页面（用完整路径解析，防止同名文件误判）
   function highlightCurrentPage() {
     const links = document.querySelectorAll('#sidebarNav a');
     links.forEach(link => {
       const href = link.getAttribute('href');
       if (!href) return;
-      const linkPage = href.split('/').pop();
 
       // 先清除所有 active（防止重复高亮）
       link.classList.remove('active');
 
-      // 精确匹配当前页面文件名
-      if (linkPage === currentPage) {
+      // 创建临时 a 标签解析相对路径为绝对路径，再比较 pathname
+      const tempA = document.createElement('a');
+      tempA.href = href;
+      const linkPath = tempA.pathname.replace(/\/$/, '');   // 去掉末尾 /
+      const currentPath = window.location.pathname.replace(/\/$/, '');
+
+      if (linkPath === currentPath) {
         link.classList.add('active');
       }
     });
