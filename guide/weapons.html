@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>武器攻略 - 三角洲行动攻略大全</title>
-<meta name="description" content="三角洲行动攻略 - weapons">
+<title>武器改装 - 三角洲行动攻略大全</title>
+<meta name="description" content="三角洲行动武器改装全攻略，K416、AR57、AKS74U、M82A1等热门武器配件推荐与改装方案。">
 <link rel="canonical" href="https://gamesite.top/guide/weapons.html">
 <link rel="stylesheet" href="../style.css">
 </head>
@@ -63,144 +63,126 @@
     <section id="weapons" class="reveal visible">
 <div class="section-header">
     <div class="section-label">Phase 04 // Arsenal</div>
-    <h2 class="section-title">武器装备与改装</h2>
-    <p class="section-desc">三角洲行动的武器改装系统是核心特色，深入研究改装搭配是提升战力的关键。</p>
-  </div>
-
-  <div class="weapon-grid">
-    <div class="weapon-card">
-      <div class="weapon-card-img"><img src="images/weapon-k416.jpg" alt="K416" style="width:100%;height:100%;object-fit:cover;" loading="lazy" onerror="this.outerHTML='<div style=&quot;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;background:linear-gradient(135deg,rgba(0,212,255,0.1),rgba(255,165,2,0.08))&quot;>🔫</div>'"></div>
-      <div class="weapon-card-body">
-        <div class="weapon-card-name">K416 突击步枪</div>
-        <div class="weapon-card-type">全能型 · 全地图适配</div>
-        <div class="weapon-card-stats">
-          <span class="weapon-stat">射速 850RPM</span>
-          <span class="weapon-stat">有效射程 500m</span>
-        </div>
-      </div>
-    </div>
-    <div class="weapon-card">
-      <div class="weapon-card-img"><img src="images/weapon-ar57.jpg" alt="AR-57" style="width:100%;height:100%;object-fit:cover;" loading="lazy" onerror="this.outerHTML='<div style=&quot;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;background:linear-gradient(135deg,rgba(46,213,115,0.1),rgba(0,212,255,0.08))&quot;>💥</div>'"></div>
-      <div class="weapon-card-body">
-        <div class="weapon-card-name">AR-57 冲锋枪</div>
-        <div class="weapon-card-type">CQB王者 · 室内近战</div>
-        <div class="weapon-card-stats">
-          <span class="weapon-stat">射速 800RPM</span>
-          <span class="weapon-stat">5.7mm破甲</span>
-        </div>
-      </div>
-    </div>
-    <div class="weapon-card">
-      <div class="weapon-card-img"><img src="images/weapon-aks74u.jpg" alt="AKS74U" style="width:100%;height:100%;object-fit:cover;" loading="lazy" onerror="this.outerHTML='<div style=&quot;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;background:linear-gradient(135deg,rgba(255,165,2,0.1),rgba(255,71,87,0.08))&quot;>⚡</div>'"></div>
-      <div class="weapon-card-body">
-        <div class="weapon-card-name">AKS74U 冲锋枪</div>
-        <div class="weapon-card-type">低成本 · 零氪首选</div>
-        <div class="weapon-card-stats">
-          <span class="weapon-stat">改装成本低</span>
-          <span class="weapon-stat">稳定性佳</span>
-        </div>
-      </div>
-    </div>
-    <div class="weapon-card">
-      <div class="weapon-card-img"><img src="images/weapon-m82a1.jpg" alt="M82A1" style="width:100%;height:100%;object-fit:cover;" loading="lazy" onerror="this.outerHTML='<div style=&quot;width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;background:linear-gradient(135deg,rgba(255,71,87,0.15),rgba(168,85,247,0.08))&quot;>🎯</div>'"></div>
-      <div class="weapon-card-body">
-        <div class="weapon-card-name">M82A1 反器材狙</div>
-        <div class="weapon-card-type">S9新武器 · 重狙</div>
-        <div class="weapon-card-stats">
-          <span class="weapon-stat">.50 BMG</span>
-          <span class="weapon-stat">64m内一枪</span>
-        </div>
-      </div>
-    </div>
+    <h2 class="section-title">武器改装全攻略</h2>
+    <p class="section-desc">配件选对，战斗力翻倍。好改装能让白板武器发挥橙色品质的实力。</p>
   </div>
 
   <div class="level-tabs">
-    <button class="level-tab active" data-level="2" data-target="wp-allround">
-      <span class="tab-num">1</span> K416 全能型
-    </button>
-    <button class="level-tab" data-level="1" data-target="wp-cqb">
-      <span class="tab-num">2</span> AR-57 CQB之王
-    </button>
-    <button class="level-tab" data-level="3" data-target="wp-budget">
-      <span class="tab-num">3</span> AKS74U 低成本战神
-    </button>
-    <button class="level-tab" data-level="4" data-target="wp-s9new">
-      <span class="tab-num">4</span> S9新武器
-    </button>
+    <button class="level-tab active" data-level="1" data-target="wp-assault">突击步枪</button>
+    <button class="level-tab" data-level="2" data-target="wp-smg">冲锋枪</button>
+    <button class="level-tab" data-level="3" data-target="wp-sniper">狙击/射手</button>
+    <button class="level-tab" data-level="4" data-target="wp-s9new">S9新增</button>
   </div>
 
-  <div class="level-content active" id="wp-allround">
-    <div class="card" style="border-top:2px solid var(--accent)">
-      <h3>K416 突击步枪 — 全能首选，全地图适配</h3>
-      <p style="color:var(--text-secondary);margin:0.5rem 0 1rem">35米内连射无明显后坐，S9胜率最高武器</p>
-      <table class="info-table">
-        <thead><tr><th>部位</th><th>配件</th><th>属性加成</th></tr></thead>
-        <tbody>
-          <tr><td>枪口</td><td>沙暴垂直补偿器</td><td>-18% 垂直后坐</td></tr>
-          <tr><td>枪管</td><td>精英重型枪管</td><td>+20% 射程</td></tr>
-          <tr><td>握把</td><td>共振三代握把</td><td>-25% 水平晃动</td></tr>
-          <tr><td>枪托</td><td>锚点导轨枪托</td><td>+30% 据枪稳定</td></tr>
-          <tr><td>弹匣</td><td>45发扩容弹匣</td><td>—</td></tr>
-          <tr><td>瞄具</td><td>微型红点 / 4倍全息</td><td>开镜速度0.3秒</td></tr>
-        </tbody>
-      </table>
-      <div class="split" style="margin-top:1rem">
-        <div class="tip-box success">
-          <div class="tip-box-title">最佳场景</div>
-          <p>零号大坝巷战、长弓溪谷中距离压制</p>
+  <div class="level-content active" id="wp-assault">
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon red">&#9876;</div>
+        <h3>K416 — 全能之王</h3>
+        <div class="article-text">
+          <p><strong>定位</strong>：全距离通用，最推荐新手改满的第一把枪。</p>
+          <p><strong>配件推荐</strong>：416L枪管（射程+15%）+ 任意握把 + 绿电池 + 消音器</p>
+          <p><strong>成本</strong>：约8-12万（配件贵但保值）</p>
         </div>
-        <div class="tip-box info">
-          <div class="tip-box-title">压枪轨迹</div>
-          <p>水平晃动大，搭配共振握把后压枪以左右微调为主</p>
+        <div class="tip-box success" style="margin-top:0.75rem;">
+          <div class="tip-box-title">改装核心</div>
+          <p>优先提升<strong>射程 + 控制</strong>，K416吃到射程加成后4枪死满血3级甲。</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon blue">&#128293;</div>
+        <h3>AR57 — 近距离霸主</h3>
+        <div class="article-text">
+          <p><strong>定位</strong>：5-30米近战神器，射速快、控制易。</p>
+          <p><strong>配件推荐</strong>：针对近战优化（镭射 + 消音器 + 轻枪管）</p>
+          <p><strong>成本</strong>：约5-8万（性价比极高）</p>
+        </div>
+        <div class="tip-box info" style="margin-top:0.75rem;">
+          <div class="tip-box-title">使用技巧</div>
+          <p>AR57优势在5-30米，超距会被K416完虐。近战腰射极强，可替代霰弹枪。</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon green">&#128163;</div>
+        <h3>AKS74U — 低成本高爆发</h3>
+        <div class="article-text">
+          <p><strong>定位</strong>：入门首选，成本低、伤害足。</p>
+          <p><strong>配件推荐</strong>：改装配件 + 消焰器 + 30发弹夹</p>
+          <p><strong>成本</strong>：约3-5万（新手友好）</p>
+        </div>
+        <div class="tip-box warn" style="margin-top:0.75rem;">
+          <div class="tip-box-title">注意</div>
+          <p>AKS74U后坐力大，需要练习压枪。但单发伤害高，3枪头即可击杀。</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="level-content" id="wp-cqb">
-    <div class="card" style="border-top:2px solid var(--green)">
-      <h3>AR-57 — CQB之王，室内清房神器</h3>
-      <p style="color:var(--text-secondary);margin:0.5rem 0 1rem">800发/分钟高射速，5.7mm弹药破甲强，1v2反打成功率超70%</p>
-      <table class="info-table">
-        <thead><tr><th>部位</th><th>配件</th></tr></thead>
-        <tbody>
-          <tr><td>枪口</td><td>FFC 双流制退器</td></tr>
-          <tr><td>握把</td><td>共振三代握把</td></tr>
-          <tr><td>枪托</td><td>锚点枪托</td></tr>
-          <tr><td>弹匣</td><td>57发弹鼓</td></tr>
-          <tr><td>特殊</td><td>战术镭射（室内贴脸无需开镜）</td></tr>
-        </tbody>
-      </table>
-      <div class="tip-box success" style="margin-top:1rem">
-        <div class="tip-box-title">最佳场景</div>
-        <p>航天基地总裁区、巴克什室内点位 — 狭窄空间内称王</p>
+  <div class="level-content" id="wp-smg">
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon purple">&#128165;</div>
+        <h3>MP5 — 新手之友</h3>
+        <div class="article-text">
+          <p><strong>定位</strong>：冲锋枪入门首选，成本低、控制易。</p>
+          <p><strong>配件推荐</strong>：消焰器 + 30发PMAG弹夹 x2</p>
+          <p><strong>成本</strong>：约1-2万（最便宜的改装）</p>
+        </div>
+        <div class="tip-box success" style="margin-top:0.75rem;">
+          <div class="tip-box-title">新手配置</div>
+          <p>MP5白板（1.1万）+ 配件（2100）= 总成本1.31万，死10次才亏13万。</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon amber">&#128176;</div>
+        <h3>K15 — 高射速近战</h3>
+        <div class="article-text">
+          <p><strong>定位</strong>：滑铲腰射流派首选，射速极快。</p>
+          <p><strong>配件推荐</strong>：镭射 + 消音器 + 50发弹鼓</p>
+          <p><strong>成本</strong>：约6-10万（配件较贵）</p>
+        </div>
+        <div class="tip-box info" style="margin-top:0.75rem;">
+          <div class="tip-box-title">使用技巧</div>
+          <p>K15适合滑铲接腰射打法，无敌帧期间输出爆炸。但需要一定的操作技巧。</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="level-content" id="wp-budget">
-    <div class="card" style="border-top:2px solid var(--amber)">
-      <h3>AKS74U — 低成本战神，零氪首选</h3>
-      <p style="color:var(--text-secondary);margin:0.5rem 0 1rem">改装成本比满改低60%，稳定性接近满配</p>
-      <table class="info-table">
-        <thead><tr><th>部位</th><th>配件</th></tr></thead>
-        <tbody>
-          <tr><td>枪管</td><td>加百列长枪管（+50米射程）</td></tr>
-          <tr><td>握把</td><td>共振垂直握把（-30%后坐力）</td></tr>
-          <tr><td>弹匣</td><td>30发聚合物弹匣</td></tr>
-          <tr><td>枪口</td><td>堡垒消音器</td></tr>
-        </tbody>
-      </table>
-      <div class="tip-box warn" style="margin-top:1rem">
-        <div class="tip-box-title">适用人群</div>
-        <p>零氪玩家快速成型、低段位上分、跑刀转战斗玩法的最佳过渡武器</p>
+  <div class="level-content" id="wp-sniper">
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon red">&#128308;</div>
+        <h3>M82A1 — 远程狙击之王</h3>
+        <div class="article-text">
+          <p><strong>定位</strong>：64米内胸部以上一枪必杀，可穿透掩体。</p>
+          <p><strong>配件推荐</strong>：高倍镜（8倍+）+ 制退器 + 重型枪管</p>
+          <p><strong>成本</strong>：约15-20万（最贵但最强力）</p>
+        </div>
+        <div class="tip-box danger" style="margin-top:0.75rem;">
+          <div class="tip-box-title">S9新增弹药</div>
+          <p>M10 "RAZOR"（6级穿+延缓用药）| M3 "K-0"（6级穿+减速）| M903 SLAP（7级穿甲）</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon green">&#128269;</div>
+        <h3>射手步枪 — 中距离压制</h3>
+        <div class="article-text">
+          <p><strong>定位</strong>：中距离（50-150米）精准打击。</p>
+          <p><strong>配件推荐</strong>：4倍镜 + 消音器 + 中型枪管</p>
+          <p><strong>成本</strong>：约8-12万（性价比高）</p>
+        </div>
+        <div class="tip-box info" style="margin-top:0.75rem;">
+          <div class="tip-box-title">使用技巧</div>
+          <p>射手步枪适合露娜（侦察兵）使用，标记后精准击杀。不要当成狙击枪用。</p>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="level-content" id="wp-s9new">
     <div class="card-grid">
-      <div class="card" style="border-top:2px solid var(--red)">
+      <div class="card" style="border-top:2px solid var(--red);">
         <div class="card-icon red">&#128163;</div>
         <h3>巴雷特 M82A1 — S9赛季新武器</h3>
         <p>半自动反器材重狙，使用 .50 BMG 口径弹药。</p>
@@ -209,12 +191,12 @@
           <li>可穿透掩体、击毁轻型载具</li>
           <li>专属弹药：穿甲 / 创伤 / 停滞三种效果</li>
         </ul>
-        <div class="tip-box danger" style="margin-top:0.75rem">
+        <div class="tip-box danger" style="margin-top:0.75rem;">
           <div class="tip-box-title">弹药类型</div>
           <p>M10 "RAZOR"（6级穿+延缓用药）| M3 "K-0"（6级穿+减速）| M903 SLAP（7级穿甲）</p>
         </div>
       </div>
-      <div class="card" style="border-top:2px solid var(--green)">
+      <div class="card" style="border-top:2px solid var(--green);">
         <div class="card-icon green">&#128165;</div>
         <h3>战术十字弩 — S9赛季新增</h3>
         <p>静音、无弹道，适合隐蔽偷袭。</p>
@@ -227,9 +209,27 @@
     </div>
   </div>
 
-  <div class="tip-box info" style="margin-top:2rem">
+  <div class="tip-box info" style="margin-top:2rem;">
     <div class="tip-box-title">推荐灵敏度设置</div>
     <p>镜头 55 / 开火 48 / 瞄准 45 — 适配全武器控枪，职业选手验证数据</p>
+  </div>
+
+  <div class="ad-slot ad-content-inline">
+    <div class="ad-placeholder">
+      <span class="ad-tag">广告</span>
+      <span class="ad-text">336 x 280 广告位</span>
+    </div>
+  </div>
+
+  <!-- 相关攻略 -->
+  <div style="margin-top:2.5rem;padding:1.5rem;background:var(--bg-card);border-radius:12px;border:1px solid var(--border);">
+    <h3 style="font-size:1rem;font-weight:700;margin-bottom:1rem;color:var(--accent);">相关攻略</h3>
+    <ul class="card-list">
+      <li><a href="operators.html" style="color:var(--accent);text-decoration:none;">干员解析</a> — 各干员武器推荐</li>
+      <li><a href="advanced.html" style="color:var(--accent);text-decoration:none;">进阶战术</a> — 高级武器战术</li>
+      <li><a href="economy.html" style="color:var(--accent);text-decoration:none;">经济系统</a> — 武器改装成本分析</li>
+      <li><a href="beginner.html" style="color:var(--accent);text-decoration:none;">新手入门</a> — 基础武器指南</li>
+    </ul>
   </div>
 </section>
   </div>
